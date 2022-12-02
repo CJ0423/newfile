@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.box{transform-style: preserve-3d ;
+    width: 100px;
+    height: 100px;
+    animation: rotate 8s infinite linear;
+    margin: 50px auto;
+}
+.box > div{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-image: url("https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f6c0f759864249a39416e3a53e2408f0~tplv-k3u1fbpfcp-watermark.image?");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 11px;
+    
+
+}
+.box1{background-position:0px 0px ;
+    transform:rotateY(90deg)  translateZ(50px);
+}
+    
+
+.box2{background-position:-100px 0px ;
+   
+    transform:rotateY(-90deg) translateZ(50px);
+} 
+.box25{background-position:-200px 0px ;
+    transform:rotateZ(90deg) translateZ(-50px);
+    
+    }
+.box3{background-position:-300px 0px ;
+    
+    transform: rotateX(90deg) translateZ(50px);
+
+}
+.box4{background-position:-400px 0px ;
+    
+    transform: rotateX(-90deg) translateZ(50px);
+
+}
+
+.box5{background-position:-500px 0px ;
+    
+transform: rotateZ(90deg) translateZ(50px);
+
+}
+
+.box6{background-position:-600px 0px ;
+    
+    transform: rotateZ(0deg) translateZ(50px);}
+
+
+#dice{
+  display: none;
+}
+@keyframes rotate {
+    from {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+    to {
+        transform: rotateX(-3turn) rotateY(1turn) rotateZ(0turn);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="dice" />
+    <label for="dice">
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box25"></div>
+
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+      </div>
+    </label>
+</body>
+</html>
