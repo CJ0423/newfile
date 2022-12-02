@@ -1,0 +1,55 @@
+﻿<html>
+   <head>
+      <title>會員基本資料</title>
+   </head>
+   <body>
+      <h2>會員基本資料</h2>
+    <form>
+      <table border="1" width="680" cellpadding="5">
+         <tr><td colspan="2">填寫個人資料:標有<font color="red">*</font>為必填欄位</td></tr>
+         <tr><td bgcolor="#dddddd"><font color="red">＊</font>國藉</td>
+             <td width="520">
+                 <select size="1" name="country">
+                     <option value="tw-台灣" selected>tw-台灣</option>
+                     <option value="ja-日本" >ja-日本</option>
+                     <option value="USA-美國" >USA-美國</option>
+                 </select>
+             </td></tr>
+         <tr><td bgcolor="#dddddd"><font color="red">＊</font>身分證字號</td>
+             <td >
+                 <input type="text" name="id" value="A123456789">(外藉人士請填寫護照號碼)
+             </td></tr>
+         <tr><td bgcolor="#dddddd"><font color="red">＊</font>設定密碼</td>
+             <td >
+                 <input type="password" name="pa1" size="8" value="aaaa">(至少4碼)　確認密碼:
+                 <input type="password" name="pa2" size="8" value="aaaa">(重新輸入密碼確認)
+             </td></tr>
+         <tr><td bgcolor="#dddddd"><font color="red">＊</font>中文姓名</td>
+             <td >
+                <input type="text" name="na" size="8">
+             </td></tr>
+         <tr><td bgcolor="#dddddd">　暱稱</td>
+             <td >
+                <input type="text" name="dna" size="8">
+             </td></tr>
+         <tr><td bgcolor="#dddddd">　英文姓名</td>
+             <td >
+                姓<input type="text" name="naf" size="12">名<input type="text" name="nas" size="12">
+             </td></tr>
+         <tr><td bgcolor="#dddddd"><font color="red">＊</font>出生日期</td><td ></td></tr>
+         <tr><td bgcolor="#dddddd"><font color="red">＊</font>性別</td><td ></td></tr>
+         <tr><td bgcolor="#dddddd"><font color="red">＊</font>E-mail</td><td ></td></tr>
+         <tr><td bgcolor="#dddddd"><font color="red">＊</font>聯絡電話</td><td ></td></tr>
+         <tr><td bgcolor="#dddddd"><font color="red">＊</font>住家電話</td><td ></td></tr>
+         <tr><td bgcolor="#dddddd"><font color="red">＊</font>行動電話</td><td ></td></tr>
+         <tr><td bgcolor="#dddddd">　傳真號碼</td><td ></td></tr>
+         <tr><td bgcolor="#dddddd">　聯絡地址</td><td ></td></tr>
+         <tr><td bgcolor="#dddddd">　學歷</td><td ></td></tr>
+         <tr><td bgcolor="#dddddd">　行業別</td><td ></td></tr>
+         <tr><td bgcolor="#dddddd">　建議事項</td><td ></td></tr>
+         <tr><td colspan="2"><br><br><br><br></td></tr>
+         <tr align="center"><td colspan="2"><br><input type="submit" value="接受約定事項並且加入會員"><input type="reset" value="放棄"><br><br></td></tr>
+      </table>
+    </form>
+   </body>
+</html>
