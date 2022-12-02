@@ -11,9 +11,8 @@
     height: 100px;
     margin: 50px auto;
     transform-style: preserve-3d;
-    animation: rotate 8s infinite linear;
+    animation: rotate 1s infinite linear;
 }
-/* 在box內的div */
 .box > div {
     width: 100px;
     height: 100px;
@@ -48,13 +47,13 @@
     background-position: -600px 0;
     transform: rotateZ(0deg) translateZ(50px);
 }
-
+@keyframe
 @keyframes rotate {
     from {
         transform: rotateX(0) rotateY(0) rotateZ(0);
     }
     to {
-        transform: rotateX(-3turn) rotateY(1turn) rotateZ(0turn);
+        transform: rotateX(1turn) rotateY(1turn) rotateZ(0turn);
     }
 }
 #dice:checked + label .box {

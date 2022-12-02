@@ -138,6 +138,35 @@
 
         }
 
+        .box1 {
+            background-position: 0 0;
+            transform: rotateY(90deg) translateZ(50px);
+        }
+
+        .box2 {
+            background-position: -100px 0;
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+
+        .box3 {
+           
+            transform: rotateX(90deg) translateZ(50px);
+        }
+
+        .box4 {
+          
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+
+        .box5 {
+            
+    transform: rotateZ(90deg) translateZ(-50px);
+        }
+
+        .box6 {
+            background-position: -600px 0;
+            transform: rotateZ(0deg) translateZ(50px);
+        }
         .box {
             transform-style: preserve-3d;
             width: 100px;
@@ -145,71 +174,11 @@
             animation: rotate 8s infinite linear;
             margin: 50px auto;
         }
-
         .box>div {
-            width: 100px;
-            height: 100px;
-            position: absolute;
-            background-image: url("https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f6c0f759864249a39416e3a53e2408f0~tplv-k3u1fbpfcp-watermark.image?");
-            background-repeat: no-repeat;
-            background-size: cover;
-            border-radius: 11px;
-
-
-        }
-
-        .box1 {
-            background-position: 0px 0px;
-            transform: rotateY(90deg) translateZ(50px);
-            opacity: 0.1;
-        }
-
-
-        .box2 {
-            background-position: -100px 0px;
-
-            transform: rotateY(-90deg) translateZ(50px);
-        }
-
-        .box25 {
-            background-position: -200px 0px;
-            transform: rotateZ(90deg) translateZ(-50px);
-
-        }
-
-        .box3 {
-            background-position: -300px 0px;
-
-            transform: rotateX(90deg) translateZ(50px);
-
-        }
-
-        .box4 {
-            background-position: -400px 0px;
-
-            transform: rotateX(-90deg) translateZ(50px);
-
-        }
-
-        .box5 {
-            background-position: -500px 0px;
-
-            transform: rotateZ(90deg) translateZ(50px);
-
-        }
-
-        .box6 {
-            background-position: -600px 0px;
-
-            transform: rotateZ(0deg) translateZ(50px);
-        }
-
-
-        #dice {
-            display: none;
-        }
-
-        @keyframes rotate {
+    width: 100px;
+    height: 100px;
+    position: absolute;}
+    @keyframes rotate {
             from {
                 transform: rotateX(0) rotateY(0) rotateZ(0);
             }
@@ -222,19 +191,74 @@
 </head>
 
 <body>
-    <input type="checkbox" id="dice" />
-    <label for="dice">
-        <div class="box">
-            <div class="box1"></div>
-            <div class="box25"></div>
-
-            <div class="box2"></div>
-            <div class="box3"></div>
-            <div class="box4"></div>
-            <div class="box5"></div>
-            <div class="box6"></div>
+    <div class="box">
+        <div class="box1">
+            <div class="dice">
+                <div class="point-one"></div>
+            </div>
         </div>
-    </label>
+
+        <div class="box2">
+            <div class="dice">
+                <div class="point-two"></div>
+                <div class="point-two"></div>
+            </div>
+        </div>
+
+        <div class="box3">
+            <div class="dice1">
+                <div class="box left  ">
+                    <div class="point-three"></div>
+                </div>
+                <div class="box middle ">
+                    <div class="point-three"></div>
+                </div>
+                <div class="box right ">
+                    <div class="point-three"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box4">
+            <div class="dice2">
+                <div class="point-four"></div>
+                <div class="point-four"></div>
+                <div class="point-four"></div>
+                <div class="point-four"></div>
+            </div>
+        </div>
+
+        <div class="box5">
+            <div class="dice5">
+                <div style="display:flex ;">
+                    <div class="point-five"></div>
+                    <div class="point-five"></div>
+                </div>
+                <div style="display:flex">
+                    <div class="point-five"></div>
+                </div>
+                <div style="display:flex">
+                    <div class="point-five"></div>
+                    <div class="point-five"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box6">
+            <div class="dice6">
+                <div style="margin:5px">
+                    <div class="point-six"></div>
+                    <div class="point-six"></div>
+                    <div class="point-six"></div>
+                </div>
+                <div style="margin:5px">
+                    <div class="point-six"></div>
+                    <div class="point-six"></div>
+                    <div class="point-six"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
