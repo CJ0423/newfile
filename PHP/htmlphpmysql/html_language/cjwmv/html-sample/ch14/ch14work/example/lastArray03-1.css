@@ -1,0 +1,13 @@
+#all{display:flex;justify-content: center;text-align: center;border:solid;height: 900px;flex-direction: column;align-items: center;}
+
+.css_table {
+    display:table;
+}
+.css_tr {
+    display: table-row;
+    
+}
+.css_td {
+    display: table-cell;
+    border:solid;width:200px
+}
