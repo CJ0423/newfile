@@ -6,7 +6,7 @@
       <h2>購物車</h2>
 <?php
 ///////////  判斷是否已有購物資料  //////////////
-  if((!(isset($_SESSION["evershop"]))) and (!(isset($_POST["goodsnu"]))))
+  if((!(isset($_SESSION["evershop"]))) and (!(isset($_POST["goodsnu"])))) //goodsnu是toy中剛剛選取的商品，並非session
   {
      echo "目前無購物資料<br>";
   }
@@ -43,7 +43,7 @@
                $np++;
            }
          }      
-      
+         //在此處將evershop存入
          $_SESSION["evershop"]=$evershop; //存入購買品項內容
          $_SESSION["evershopnu"]=$np; //存入購買品項數量
         
