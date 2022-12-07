@@ -9,35 +9,35 @@
 //宣告類別
 class cart
 {
-	var $owner;
-	var $price=300;	//每套產品的定價
-	var $goods;
-	function add_item($title, $amt){
-	//新增項目到購物車中
-		$this->goods[$title] +=$amt;
-		//傳回數量
-		return $amt;
-	}
-	function remove_item($title, $amt){
-	//由購物車內移除項目
-	  if($this->goods[$title]>$amt)
-	  {
-		$this->goods[$title] -=$amt;
-		//傳回數量
-		return $amt;
-	  }else{
-	  	echo "錯誤!! $title 移除的量大於該項目既有的量!<br>";
-		return false;
-	  }
-	}
-	function get_owner(){
-	//傳回購物車擁有者的名稱
-		return $this->owner;	
-	}
-	function get_goods(){
-	//傳回購物車中的物件清單
-		return $this->goods;
-	}
+ var $owner;
+ var $price=300; //每套產品的定價
+ var $goods;
+ function add_item($title, $amt){
+ //新增項目到購物車中
+  @$this->goods[$title] +=$amt;
+  //傳回數量
+  return $amt;
+ }
+ function remove_item($title, $amt){
+ //由購物車內移除項目
+   if($this->goods[$title]>$amt)
+   {
+  $this->goods[$title] -=$amt;
+  //傳回數量
+  return $amt;
+   }else{
+    echo "錯誤!! $title 移除的量大於該項目既有的量!<br>";
+  return false;
+   }
+ }
+ function get_owner(){
+ //傳回購物車擁有者的名稱
+  return $this->owner; 
+ }
+ function get_goods(){
+ //傳回購物車中的物件清單
+  return $this->goods;
+ }
 }//end class
 
 $item=0;
