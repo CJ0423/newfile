@@ -1,0 +1,12 @@
+.navbar{
+    background-color: rgb(60, 93, 131);
+}
+.navbar-right{   display: inline-block;
+    float: center;
+    vertical-align: top;
+
+}
+  
+  .navbar-collapse-center {
+    text-align: right;
+  }
