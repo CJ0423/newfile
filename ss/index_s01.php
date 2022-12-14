@@ -1,10 +1,7 @@
-<?php require_once('connections/conn_db.php');
-// 只要求一次如果有就不會做了?>
-<?php
-(!isset($_SESSION)) ? session_start() : ""; ?>
+<?php require_once('connections/conn_db.php'); ?>
+<?php (!isset($_SESSION)) ? session_start() : ""; ?>
 <!doctype html>
 <html lang="zh-TW">
-</html>
 
 <head>
     <!-- Required meta tags -->
@@ -12,43 +9,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link rel="stylesheet" href="./website_s01.css">
-    <title>電商藥莊</title>
+    <link rel="stylesheet" href="website_s01.css">
+    <title>電商藥妝</title>
 </head>
 
 <body>
     <section id="header">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <!-- 不同 -->
-            <a class="navbar-brand" href="#"><img src="./images/logo.jpg" alt="電商藥粧" class="img-fluid rounded-circle"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img src="images/logo.jpg" alt="電商藥妝" class="img-fluid rounded-circle"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
-            <?php $SQLstring = "SELECT * FROM pyclass WhERE level= 1 ORDER BY sort";
-            $pyclass01= $link->query($SQLstring); ?>
+
+            <?php
+            //列出產品類別第一層
+            $SQLstring = "SELECT * FROM pyclass WHERE level=1 ORDER BY sort";
+            $pyclass01 = $link->query($SQLstring);
+            ?>
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- 修改成mx 置中 -->
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item active">
-                    </li>
                     <li class="nav-item dropdown">
                         <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle">產品資訊</a>
                         <ul class="dropdown-menu">
                             <?php while ($pyclass01_Rows = $pyclass01->fetch()) { ?>
-                                <li class="dropdown-item dropdown-submenu">
-                                    <a href="#" data-toggle="dropdown"class="dropdown-toggle"><i calss="fas<?php echo $pyclass01_Rows['fonticon'];?>fa-lg fa-fw"></i><?php echo $pyclass01_Rows['cname']?></a>
-                                    <?php
-                                    // 複製第二層
-                                    $SQLstring =sprintf("SELECT*FROM pyclass WHERE level=2 AND uplink=%d ORDER BY sort", $pyclass01_Rows['classid']);
-                                    $pyclass02 = $link->query($SQLstring); ?>
-                                    <ul class="dropdown-menu">
-                                        <?php while ($pyclass02_Rows =$pyclass02->fetch()) { ?>
-                        <li class="dropdown-item"><em class="far<?php echo $pyclass02_Rows['fonticon'];?>fa-fw"></em><a href="#"><?php echo $pyclass02_Rows['cname'];?></a></li><?php } ?>
-                                    </ul>
-                                </li>
+
+                            <li class="dropdown-item dropdown-submenu">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle"> <i
+                                        class="fas<?php echo $pyclass01_Rows['fonticon'] ?> fa-lg fa-fw"></i>
+                                    <?php echo $pyclass01_Rows['cname'] ?>
+                                </a>
+                                <?php
+                                //列出產品類別第二層
+                                $SQLstring = sprintf("SELECT * FROM pyclass WHERE level=2 AND uplink=%d ORDER BY sort", $pyclass01_Rows['classid']);
+                                $pyclass02 = $link->query($SQLstring);
+                                ?>
+                                <ul class="dropdown-menu">
+                                    <?php while ($pyclass02_Rows = $pyclass02->fetch()) { ?>
+                                    <li class="dropdown-item"><em
+                                            class="far<?php echo $pyclass02_Rows['fonticon']; ?> fa-fw"></em>
+                                        <a href="#">
+                                            <?php echo $pyclass02_Rows['cname']; ?>
+                                        </a>
+                                    </li>
+                                    <?php } ?>
+                                </ul>
+                            </li>
                             <?php } ?>
                         </ul>
                     </li>
@@ -73,58 +83,67 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">購物車</a>
                     </li>
-
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">企業專區
-
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            企業專區
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">認識企業</a>
+                            <a class="dropdown-item" href="#">企業文化</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">全台門市資訊</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">供應商</a>
+                            <a class="dropdown-item" href="#">供應商報價服務</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">加盟專區</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">投資人專區</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </li>
-                    <?php multilist01(); ?>
-                </ul>
+
+                    <?php multiList01(); ?>
+
+                   
             </div>
         </nav>
-        <?php 
-        function multilist01()
+        <?php
+        function multiList01()
         {
             global $link;
-            $SQLstring = "SELECT * FROM pyclass WHERE level= 1 ORDER BY sort";
+            //列出產品類別第一層
+            $SQLstring = "SELECT * FROM pyclass WHERE level=1 ORDER BY sort";
             $pyclass01 = $link->query($SQLstring);
         ?>
-            <?php while ($pyclass01_Rows = $pyclass01->fetch()) { ?>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" date-toggle="dropdown" aria-expanded="false">
-                        <?php echo $pyclass01_Rows['cname'] ?></a>
+        <?php while ($pyclass01_Rows = $pyclass01->fetch()) { ?>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <?php echo $pyclass01_Rows['cname'] ?>
+            </a>
+            <div class="dropdown-menu">
+                <?php
+                //列出產品類別第二層
+                $SQLstring = sprintf("SELECT * FROM pyclass WHERE level=2 AND uplink=%d ORDER BY sort", $pyclass01_Rows['classid']);
+                $pyclass02 = $link->query($SQLstring);
+                $i = 1; //控制第二層是否為最後一筆
+                ?>
+                <?php while ($pyclass02_Rows = $pyclass02->fetch()) { ?>
 
-                    <div class="dropdown-menu">
-                        <?php
-                        // 列出第二層
-                        $SQLstring = sprintf("SELECT * FROM pyclass WHERE level=2 AND uplink=%d ORDER BY sort", $pyclass01_Rows['classid']);
-                        $pyclass02 = $link->query($SQLstring); 
-                        $i =1 ;?>
-                        <?php while ($pyclass02_Rows = $pyclass02->fetch()) { ?>
+                <a class="dropdown-item" href="#"><em class="far<?php echo $pyclass02_Rows['fonticon']; ?> fa-fw"></em>
+                    <?php echo $pyclass02_Rows['cname']; ?>
+                </a>
+                <?php if ($i != $pyclass02->rowCount()) { ?>
+                <div class="dropdown-divider"></div>
+                <?php } ?>
+                <?php $i++;
+                } ?>
+            </div>
+        </li>
 
-                            <a class="dropdown-item" href="#"><em class="far<?php echo $pyclass02_Rows['fonticon'];?>fa-fw"></em>
-                                <?php echo $pyclass02_Rows['cname'];?></a>
-                        <?php if($i != $pyclass02->rowCount())
-                     { ?>
-                        <div class="dropdown-divider"></div>
-                        <?php }?>
-                        <?php $i++;}?>
-                    </div>
-                </li>
-            <?php } ?>
-        <?php } ?>   
+        <?php } ?>
+        <?php } ?>
+
     </section>
     <section id="content">
         <div class="container-fluid">
