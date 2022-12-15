@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>運用圖片製作的骰子</title>
+    <style>
+        .dice1 {
+            width: 100px;
+            height: 100px;
+            border: 1px;
+            border-radius: 8px;
+            border-style: solid;
+
+        }
+
+        .dice2 {
+            width: 100px;
+            height: 100px;
+            border: 1px;
+            border-radius: 8px;
+            border-style: solid;
+
+
+        }
+
+        .point-one {
+            width: 40px;
+
+            height: 40px;
+            border-radius: 100%;
+            background-color: crimson;
+        }
+
+        .point-two {
+            width: 30px;
+
+            height: 30px;
+            border-radius: 100%;
+            background-color: rgb(45, 44, 44);
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .point-three {
+            width: 30px;
+
+            height: 30px;
+            border-radius: 100%;
+            background-color: rgb(45, 44, 44);
+            float: left;
+            clear: left;
+            margin-left: 10px;
+        }
+
+        .left {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+        }
+
+        .middle {
+            margin-top: 20px;
+            margin-bottom: 5px;
+            margin-left: 25px;
+        }
+
+        .right {
+            margin-top: 30px;
+            margin-left: 45px;
+        }
+
+        .point-four {
+            width: 30px;
+
+            height: 30px;
+            border-radius: 100%;
+            background-color: crimson;
+            float: left;
+            margin: 10px;
+
+        }
+
+        .point-five {
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            background-color: rgb(45, 44, 44);
+            margin: 1px;
+            margin-left: 7px;
+            margin-right: 7px
+        }
+
+        .point-six {
+            width: 30px;
+
+            height: 30px;
+            border-radius: 100%;
+            background-color: rgb(45, 44, 44);
+
+            margin: 2px;
+        }
+
+        .dice {
+            width: 100px;
+            height: 100px;
+            border: 1px;
+            border-radius: 8px;
+            border-style: solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dice5 {
+            width: 100px;
+            height: 100px;
+            border: 1px;
+            border-radius: 8px;
+            border-style: solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .dice6 {
+            width: 100px;
+            height: 100px;
+            border: 1px;
+            border-radius: 8px;
+            border-style: solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .box {
+            transform-style: preserve-3d;
+            width: 100px;
+            height: 100px;
+            animation: rotate 8s infinite linear;
+            margin: 50px auto;
+        }
+
+        .box>div {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-image: url("https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f6c0f759864249a39416e3a53e2408f0~tplv-k3u1fbpfcp-watermark.image?");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 11px;
+
+
+        }
+
+        .box1 {
+            background-position: 0px 0px;
+            transform: rotateY(90deg) translateZ(50px);
+            /* opacity: 0.1; */
+        }
+
+
+        .box2 {
+            background-position: -100px 0px;
+
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+
+        .box25 {
+            background-position: -200px 0px;
+            transform: rotateZ(90deg) translateZ(-50px);
+
+        }
+
+        .box3 {
+            background-position: -300px 0px;
+
+            transform: rotateX(90deg) translateZ(50px);
+
+        }
+
+        .box4 {
+            background-position: -400px 0px;
+
+            transform: rotateX(-90deg) translateZ(50px);
+
+        }
+
+        .box5 {
+            background-position: -500px 0px;
+
+            transform: rotateZ(90deg) translateZ(50px);
+
+        }
+
+        .box6 {
+            background-position: -600px 0px;
+
+            transform: rotateZ(0deg) translateZ(50px);
+        }
+
+
+        #dice {
+            display: none;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotateX(0) rotateY(0) rotateZ(0);
+            }
+
+            to {
+                transform: rotateX(-3turn) rotateY(1turn) rotateZ(0turn);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="dice" />
+    <label for="dice">
+        <div class="box">
+            <div class="box1"></div>
+            <div class="box25"></div>
+
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box4"></div>
+            <div class="box5"></div>
+            <div class="box6"></div>
+        </div>
+    </label>
+</body>
+
+</html>
