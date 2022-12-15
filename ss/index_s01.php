@@ -6,7 +6,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=devi1ce-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -27,6 +27,7 @@
 
             <?php
             //列出產品類別第一層
+            // 抓取資料庫中的 pyclass 條件是第一層級 名字是sort的
             $SQLstring = "SELECT * FROM pyclass WHERE level=1 ORDER BY sort";
             $pyclass01 = $link->query($SQLstring);
             ?>
