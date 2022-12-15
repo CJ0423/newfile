@@ -161,3 +161,9 @@ hr{
   font-size: 28px;
   margin-right: 70px;
 }
+.face:hover{
+           
+  width: 100px;
+  height: 100px;
+
+}
