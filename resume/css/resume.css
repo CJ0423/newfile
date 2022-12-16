@@ -111,7 +111,7 @@
 }
 
 body {
-  height: 100000px;
+  height: 400vh;
 }
 
 .content-page1 {
@@ -191,29 +191,101 @@ body {
 }
 
 .content-page2-check {
+  background-color: greenyellow;
   width: calc(100% - 200px);
   height: 100vh;
   position: absolute;
   left: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  z-index: 5;
 }
-.content-page2-check .title {
+.content-page2-check .content-page2-check-text {
+  height: 50vh;
+}
+.content-page2-check .content-page2-check-text .title {
   font-size: 72px;
   margin-bottom: 20px;
+  color: #000000;
 }
-.content-page2-check .small-title {
+.content-page2-check .content-page2-check-text .small-title {
   font-size: 36px;
   margin-bottom: 20px;
 }
-.content-page2-check .introduce {
+.content-page2-check .content-page2-check-text .introduce {
   font-size: 20px;
+  margin-bottom: 50px;
 }
 .content-page2-check .insert {
-  background-color: #FFC007;
+  background-color: #000000;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+}
+.content-page2-check .insert div .turn {
+  display: flex;
+}
+.content-page2-check .insert div .turn hr {
+  border: dashed 0.5px;
+  width: 85%;
+  border-color: #9d5f00;
+  margin: auto;
+  z-index: 6;
+}
+.content-page2-check .insert .insert-left {
+  width: 30%;
+  height: 50vh;
+  background-color: rgb(0, 0, 0);
+}
+.content-page2-check .insert .insert-left .left-top {
+  width: 100%;
+  height: 25vh;
+  background-color: rgb(0, 240, 12);
+}
+.content-page2-check .insert .insert-left .left-bottom {
+  width: 100%;
+  height: 25vh;
+  background-color: pink;
+}
+.content-page2-check .insert .insert-left hr {
+  border: dashed 0.5px;
+  width: 85%;
+  border-color: #9d5f00;
+  margin: auto;
+}
+.content-page2-check .insert .insert-right {
+  width: 30%;
+  height: 50vh;
+}
+.content-page2-check .insert .insert-right .right-top {
+  width: 100%;
+  height: 25vh;
+  background-color: green;
+}
+.content-page2-check .insert .insert-right .right-bottom {
+  width: 100%;
+  height: 25vh;
+  background-color: purple;
+}
+.content-page2-check .insert .insert-right hr {
+  border: dashed 0.5px;
+  width: 85%;
+  border-color: #9d5f00;
+  margin: auto;
+}
+.content-page2-check .insert .insert-text {
+  width: 40%;
+  height: 50vh;
+  margin-left: 30px;
+  background-color: red;
 }
 
 .content-page2 {
   width: calc(100% - 200px);
-  height: 10000vh;
+  height: 100vh;
   position: relative;
   left: 200px;
   background: linear-gradient(181.1154931321deg, rgb(149, 168, 181) 1.644486692%, rgb(61, 72, 78) 92.7724968314%);
