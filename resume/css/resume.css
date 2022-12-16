@@ -318,13 +318,11 @@ body {
   font-size: 36px;
   text-align: center;
   margin-bottom: 10px;
+  list-style: circle;
 }
 .content-page2-check .insert-all .insert-text .introduce {
   font-size: 23px;
   line-height: 40px;
   margin-bottom: 10px;
   list-style: circle;
-}
-.content-page2-check .insert-all .insert-text .introduce ul li {
-  text-indent: -1em;
 }/*# sourceMappingURL=resume.css.map */

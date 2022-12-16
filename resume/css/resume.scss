@@ -335,17 +335,14 @@ opacity: 0.4;}
     .title{
       font-size: 36px;
       text-align: center; margin-bottom: 10px;
-   
+      list-style: circle
     }
     .introduce{
       font-size: 23px;
       line-height: 40px;
       margin-bottom: 10px;
+      // 要修理
       list-style:circle;
-      ul{
-      li{
-        text-indent: -1em;
-      }}
     }
   }
 }
