@@ -209,7 +209,7 @@ ul{
 
 //內文2
 .left{width:200px;height:100vh;}
-.copy{  width:calc(100% ) ;
+.copy{  width:calc(100% - 200px ) ;
   height: 100vh;
   position:absolute;
   left:200px;
@@ -351,4 +351,29 @@ opacity: 0.4;}
 .content-page3{
   display: flex;
   padding-top:10px;
+  position: relative;
+
+  z-index: 1;
+  .design-fell{
+    width: 40%;
+    height: 40%;
+    position:absolute;
+    top: 55%;
+    left: 45%;
+    background:$secondary;
+    opacity: 0.4;
+  }
+  .title{font-size: 48px;
+    text-align: center;
+  position: relative;
+top: 10%;}
+  .contral{
+    width:200px;
+    height:80vh
+  }
+}
+footer{
+  width:100%;
+  height:20vh;
+  background-color: #FFC007;
 }
