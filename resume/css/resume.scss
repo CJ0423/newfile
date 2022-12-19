@@ -100,6 +100,7 @@ ul{
     width: 100%;
     // 下面這個margin決定了整個LI和最底部的距離，感到疑惑的地方是margin不適應該只對同曾有影響，但我不理解的是，為什麼用padding在dropdown內沒有效果卻在這邊，才有效果
     margin-bottom: 20px;
+    // 這個display造成了點點消失的原因
     display: flex;
     justify-content: center;
 
