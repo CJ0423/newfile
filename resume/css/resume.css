@@ -72,7 +72,6 @@
   padding: 0px;
 }
 .nav-right ul.drop-down-menu {
-  list-style: none;
   /*定義出以下的資料，這是下拉式表單的核心*/
   /* 這是匡線的部分 */
   /*這其實就是同時能夠達成行列元素以及區塊元素的效果 */
@@ -318,11 +317,9 @@ body {
   font-size: 36px;
   text-align: center;
   margin-bottom: 10px;
-  list-style: circle;
 }
 .content-page2-check .insert-all .insert-text .introduce {
   font-size: 23px;
   line-height: 40px;
   margin-bottom: 10px;
-  list-style: circle;
 }/*# sourceMappingURL=resume.css.map */
