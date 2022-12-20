@@ -6,6 +6,16 @@ $secondary:linear-gradient(181.1154931320949deg, rgba(149, 168, 181,1) 1.6444866
 $point:#FFC007;
 $strong:#00487C;
 $sup:#9d5f00;
+.hidden{
+  width: 350px;
+height: 350px;
+font-size: 24px;
+  float: left;
+  position: relative;
+  left: 30%;
+  background:$secondary ;
+  color: $primary;
+}
 .strong{color: $strong;}
 *{
     padding: 0px;
@@ -235,6 +245,7 @@ opacity: 0.4;}
 
  .content-page2-check-text{
   height: 50vh;
+
   .title{ font-size: 72px;
     margin-bottom: 20px;
   color: #000000;}
@@ -299,7 +310,6 @@ opacity: 0.4;}
       height: 100%;
       font-size:36px ;
       color: $point;
-      
 
       .right-top{
         width: 100%;
@@ -332,9 +342,17 @@ opacity: 0.4;}
   }
   .insert-text{
     width: 30%;
-    height: calc(50vh + 40px);;
+    height: calc(50vh + 40px);
     margin-left: 30px;
-    .title{
+
+    ol{margin-left: 50px;
+      margin-top: 20px;
+
+
+      li{display: list-item;
+     }
+    }
+ .title{
       font-size: 36px;
       text-align: center; margin-bottom: 10px;
     }
@@ -366,7 +384,7 @@ opacity: 0.4;}
   .title{font-size: 48px;
     text-align: center;
   position: relative;
-top: 10%;}
+top: 5%;}
   .contral{
     width:200px;
     height:80vh
@@ -376,11 +394,13 @@ footer{
   width:auto;
   height:8vh;
   margin-top: 12vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #FFC007;
 div{position:relative;
 left:85px}
+}
+.fa, .fab, .fal, .far, .fas{
+  display: unset;
 }

@@ -1,4 +1,15 @@
 @charset "UTF-8";
+.hidden {
+  width: 350px;
+  height: 350px;
+  font-size: 24px;
+  float: left;
+  position: relative;
+  left: 30%;
+  background: linear-gradient(181.1154931321deg, rgb(149, 168, 181) 1.644486692%, rgb(61, 72, 78) 92.7724968314%);
+  color: #ffffff;
+}
+
 .strong {
   color: #00487C;
 }
@@ -317,6 +328,13 @@ body {
   height: calc(50vh + 40px);
   margin-left: 30px;
 }
+.content-page2-check .insert-all .insert-text ol {
+  margin-left: 50px;
+  margin-top: 20px;
+}
+.content-page2-check .insert-all .insert-text ol li {
+  display: list-item;
+}
 .content-page2-check .insert-all .insert-text .title {
   font-size: 36px;
   text-align: center;
@@ -347,7 +365,7 @@ body {
   font-size: 48px;
   text-align: center;
   position: relative;
-  top: 10%;
+  top: 5%;
 }
 .content-page3 .contral {
   width: 200px;
@@ -366,4 +384,8 @@ footer {
 footer div {
   position: relative;
   left: 85px;
+}
+
+.fa, .fab, .fal, .far, .fas {
+  display: unset;
 }/*# sourceMappingURL=resume.css.map */
