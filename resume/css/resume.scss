@@ -6,16 +6,52 @@ $secondary:linear-gradient(181.1154931320949deg, rgba(149, 168, 181,1) 1.6444866
 $point:#FFC007;
 $strong:#00487C;
 $sup:#9d5f00;
-.hidden{
-  width: 350px;
-height: 350px;
-font-size: 24px;
-  float: left;
-  position: relative;
-  left: 30%;
-  background:$secondary ;
-  color: $primary;
+body{position: relative;}
+html{
+  // 有滑鼠移動感的滾動
+  scroll-behavior: smooth;
 }
+#close-btn{
+    display: none;
+   
+}
+label{
+  display: inline-block;
+  cursor: pointer;
+}
+#close-btn:checked~.hidden1{
+  transform: 3s;
+  display: unset;
+
+}
+.hidden1{
+  display: none;
+
+ 
+  .close{color: white;
+    background-color: red;
+    width: 8%;
+    height: 8%;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+  }
+  width: 600px;
+height: 400px;
+font-size: 24px;
+  position: fixed;
+  text-align: center;
+  left: calc(50% - 300px);
+  top:30%;
+  background:$point ;
+  color: $strong;
+  z-index: 7;
+  h5{
+    position: absolute;
+    left: 45%;
+    top:80%
+   
+  }}
 .strong{color: $strong;}
 *{
     padding: 0px;
@@ -25,6 +61,7 @@ font-size: 24px;
 }
 // nav
 .nav-left{
+  display: none;
   width:200px;
   height: 100vh;
   position: fixed;

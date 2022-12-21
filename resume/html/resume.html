@@ -21,11 +21,14 @@
 
 </head>
 
-<body>
-    <div class="hidden">
-        <h3><p>首先謝謝您點開致謝名單</p></h3>
-        <p>完成這份簡易的履歷網站，雖然沒有花費許多時間，但卻讓我收穫了許多友情，基於個資法，不透露協助我的人，</p>
-        <p>倘若您是曾經幫助過我的人，在此我想對你說一聲謝謝!</p><p>倘若您只是不小心點開的人，也謝謝您看到這裡!</p>
+<body> <input id="close-btn" type="checkbox">
+    <div class="hidden1">
+       
+        <label  class="close" for="close-btn">X</label>
+        <h3><p>首先謝謝您點開致謝名單</p><br></h3>
+        <h4>完成這份簡易的履歷網站，雖然沒有花費太多時間，但卻讓我收穫了許多友情，基於個資法，不透露協助我的人。</h4><br>
+        <h4>倘若您是曾經幫助過我的人，在此我想對您說一聲謝謝!</h4><p>倘若您只是不小心點開的人，也謝謝您看到這裡!</p><br>
+        <h5 align="right">以此紀念在職訓局收穫的一眾朋友</h5>
     </div>
     <!-- 全部都有的東西 -->
     <nav>
@@ -39,7 +42,7 @@
                     </div>
                     <div><a class="fas " href="#work">作品集</a>
                     </div>
-                    <div><a class="fas " href="#">致謝</a>
+                    <div><a class="fas " href="#"><label for="close-btn">致謝</label></a>
                     </div>
                     <div><a class="fas " href="mailto:b09785157888@gmail.com">聯絡誠峻</a>
                     </div>
@@ -49,6 +52,7 @@
             </div>
         </div>
         <div class="nav-right">
+            
             <ul class="drop-down-menu">
                 <li><a href="#"><i class="fas fa-home"></i></a>
                 </li>
@@ -160,6 +164,9 @@
           prevEl: ".swiper-button-prev",
         },
       });
+    </script>
+    <!-- 我自己的js -->
+    <script src="../js/resume.js">
     </script>
 </body>
 
