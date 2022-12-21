@@ -1,5 +1,6 @@
 .swiper {
    width:calc(100% - 400px);
+   min-height: auto;
     height: 80vh;
     overflow: hidden;
   }
@@ -29,5 +30,4 @@
     width:calc(100% - 400px);
     height: 100vh;
     object-fit: contain;
- 
   }

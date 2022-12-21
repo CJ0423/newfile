@@ -6,6 +6,7 @@ $secondary:linear-gradient(181.1154931320949deg, rgba(149, 168, 181,1) 1.6444866
 $point:#FFC007;
 $strong:#00487C;
 $sup:#9d5f00;
+@media(min-width:1080px){ 
 body{position: relative;}
 html{
   // 有滑鼠移動感的滾動
@@ -61,12 +62,13 @@ font-size: 24px;
 }
 // nav
 .nav-left{
-  display: none;
+  display:"";
   width:200px;
   height: 100vh;
   position: fixed;
   background-color: $point;
   z-index: 5;
+  transform: opacity ;
   // display: none;
 
   // ul{
@@ -120,6 +122,7 @@ font-size: 24px;
   right: 1%;
   top: 40%;
   width: 40px;
+  visibility: hidden;
   margin-top: -120px;
   z-index: 4;
   background-color:$point;
@@ -183,6 +186,7 @@ ul{
   }
 //內文1
 .content-page1{
+
   // visibility: hidden;
     width: 100%;
     height: 100vh;
@@ -255,7 +259,10 @@ ul{
 
 
 //內文2
-.left{width:200px;height:100vh;}
+.left{width:200px;height:100vh;
+  background:$secondary;
+  opacity: 0.4;
+}
 .copy{  width:calc(100% - 200px ) ;
   height: 100vh;
   position:absolute;
@@ -440,4 +447,55 @@ left:85px}
 }
 .fa, .fab, .fal, .far, .fas{
   display: unset;
+}}
+@media(max-width:1000px) {
+  .nav-left{
+   visibility: collapse;
+  }
+  .nav-right{
+    visibility: visible;
+  }
+  .left{display: none;
+  width:0px}
+  .copy{ width:100%;
+    position:absolute;
+  left:0px;
+  height:100vh}
+  .content-page2-check{width:100%}
+}
+
+ .title{
+      font-size: 36px;
+      text-align: center; margin-bottom: 10px;
+    }
+.contral{
+
+  min-width: 200px;
+  max-height: 398px;
+}
+  .insert-all{
+    .insert-text{
+    .fas.title{font-size: 28px;}
+    
+  }}
+  .content-page3{
+    display: flex;
+    justify-content: center;
+    .design-fell{
+width: 0px;
+    }
+  .swiper {
+   width:100%;
+   min-height: auto;
+    height: 80vh;
+    overflow: hidden;
+      .swiper-slide img {
+    display: block;
+    width:100%;
+    height: 100vh;
+    object-fit: contain;
+  }
+  }}
+@media(max-width:760px){
+
 }
