@@ -26,8 +26,9 @@
   }
 
   .swiper-slide img {
-    display: block;
+    display:block;
     width:calc(100% - 400px);
-    height: 100vh;
+    min-width: 700px;
+    height: 90vh;
     object-fit: contain;
   }
