@@ -66,6 +66,7 @@ mysqli_query($link,"SET NAMES UTF8");
 
                  //以課別遞增,月薪遞減，姓名筆劃遞增排序
 //步驟三:依報表列印要求進行排序
+// 這是多維陣列排序輕鬆排完成
 array_multisort($paper["dp"],SORT_STRING,SORT_ASC,$paper["mp"],SORT_NUMERIC,SORT_DESC,$paper["na"],SORT_NUMERIC,SORT_ASC,$paper["jo"],$paper["d1"]);
 /*
                  //以課別遞增排序
