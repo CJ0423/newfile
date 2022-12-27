@@ -20,20 +20,22 @@
 	//開啟指定檔案  
 	$fileindex=fopen($file,"r"); 
 	
-	//移動檔案指標
-	fseek($fileindex,10);
+	//移動檔案指標 fseek是說要移動多少範圍
+	fseek($fileindex,12);
 	//讀取對應位置的資料
-	echo "指標位置10 的文字 -> ".fread($fileindex,2)."<p>";
+	echo "指標位置12 的文字 -> ".fread($fileindex,3)."<p>";
 	
 	//由目前的位置再往下移動
 	fseek($fileindex,22,SEEK_CUR);
+	// ch20 27頁數  SEEK_SET：由檔案開頭開始移動（預設狀態）。            SEEK_CUR：由目前指標位置開始移動。            SEEK_END：由檔案結尾開始移動。
+
 	
 	//判斷是否到檔案結尾
 	if(!feof($fileindex))
 	{
 		//未到檔案結尾,就讀取二位元的資料
 		echo "未到檔案結尾...<p>";
-		echo "指標位置32 的文字 -> ".fread($fileindex,2)."<p>";
+		echo "指標位置32 的文字 -> ".fread($fileindex,5)."<p>";
 	}else{
 		echo "已經到檔案的結尾!<br>";
 	}

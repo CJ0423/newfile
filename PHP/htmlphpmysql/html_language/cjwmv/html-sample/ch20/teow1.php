@@ -17,7 +17,7 @@
   $fileindex=fopen($file,"a+");
   
 //指定要寫入的字串和寫入資料到檔案
-  $str="jimmy;N120763421;彰化縣;二水鄉大同街29號\r\n";
+  $str="業大同;N120763421;彰化縣;二水鄉大同街29號\r\n";
   $write_ok=fwrite($fileindex,$str);  
 	  
 //判定是否寫入成功

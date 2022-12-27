@@ -9,14 +9,15 @@
 //指定和9-1-5A.php同路徑的文字檔案
  $file="word.txt";
  
-//先判斷檔案是否存在
+//先判斷檔案是否存在 
   if(file_exists($file))
   {
-	//複製檔案
+	//複製檔案 幫我複製一個檔案 並且叫做word2
 	$success=copy($file,"word2.txt");
 	if($success)
 	{
 		echo "檔案已經成功複製!<p>";
+		// rename更改名字
 		$rn_success=rename("word2.txt","newwrite.txt");
 		if($rn_success){
 			echo "word2.txt 已經改名為: newwrite.txt<p>";

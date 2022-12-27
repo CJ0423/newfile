@@ -7,10 +7,11 @@
 
 <?php 
 //指定Server端的文字檔案
-  $file1="C:\\xampp\htdocs\guestbook\word.txt";
+  $file1="C:\\xampp\\htdocs\\ch20\\word.txt";
  
-//以file函數讀取檔案
+//以file函數讀取檔案 小老鼠表示一開始沒有資料，但不要顯示出來，請幫我設定為0就好。
  $content=@file($file1); 
+// 不用透過fopen就可以開啟，file將會自動開啟超級方便，但是每一行將會以陣列的方式顯示出來，因此我們用foreach去開啟。
 
 //判定檔案是否存在
   if($content != 0)

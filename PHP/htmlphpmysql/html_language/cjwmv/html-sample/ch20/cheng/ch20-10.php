@@ -32,6 +32,7 @@ $ftype=$_FILES["ufile"]["type"];
 	
 	//將檔案另存到指定的位置
 	//$success=copy($tmpname,"newsql.txt");
+	chdir("C:\\Users\\User\\Desktop");
         $success=copy($tmpname,$fname);	//複製過來的檔案必定在同一層的資料夾內
 	if($success)
 	{
