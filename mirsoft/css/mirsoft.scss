@@ -229,27 +229,32 @@ nav {
     //    這是要扣除掉NAV的10PX的PADDING
            width: calc(100%);
             overflow: hidden;
-
             ul{
                 list-style: none;
             }
             input {
                 display: none;
-              }
-              
+              }         
               /* 漢堡按鈕 */
               label {
                 float: left;
                 padding-right: 50px;
                 line-height: 50px;
-                ::before{content: 三;}
                 cursor: pointer;
                 img {
                   width: 30px;   
                   vertical-align: middle;
                 }
-              }
-              
+            }
+        label::before{content: "三";} 
+        input:checked + label::before{
+            display: none;
+        } 
+        label::after{content: "X";
+        display: none;}
+        input:checked + label::after{
+            display: block;}
+
               /* menu*/
               .menu {
                 display: none;
@@ -260,7 +265,7 @@ nav {
                   border-bottom: 1px solid #efefef;
                   a {
                     display: block;
-                    line-height: 0px;
+                    line-height: 50px;
                     font-size: 18px;
                     color: #5d5d5d;
                     text-align: left;
@@ -334,9 +339,37 @@ section{
     display: flex;
     justify-content: center;
     .bander{
+        position: relative;
         display: flex;
         justify-content: center;
+       
+    .content{
+        background-color: aqua;
+        width: 35%;
+        height: 51%;
+        font-weight: 600;
 
+        position: absolute;
+        left: 10%;
+        top: 20%;
+
+        .title{
+            background-color: white;
+            color:#950c17;
+            display:inline
+        }
+        .big-title{
+            font-size: 2.3125rem;
+            margin-bottom: 1.25rem;
+            font-weight: 600;          
+        }
+        .buy-btn{
+            display: inline;
+            background-color: #000000;
+            color: white;
+            padding-top:30px,15px;
+        }
+    }
         picture{
             img {
                 width: 100%;
