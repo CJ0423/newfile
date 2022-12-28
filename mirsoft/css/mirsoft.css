@@ -273,26 +273,73 @@ section .bander .content {
   background-color: aqua;
   width: 35%;
   height: 51%;
-  font-weight: 600;
+  padding: 48PX;
   position: absolute;
   left: 10%;
-  top: 20%;
+  top: 22.58%;
 }
-section .bander .content .title {
+@media (max-width: 1082px) {
+  section .bander .content {
+    width: 98%;
+    top: 90%;
+    left: 1%;
+    background-color: #fff;
+    box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.11), 0 0.1875rem 0.4375rem rgba(0, 0, 0, 0.13);
+  }
+}
+@media (max-width: 858px) {
+  section .bander .content {
+    width: 100%;
+    top: 100%;
+    left: 0%;
+    padding-top: 24px;
+    padding-bottom: 16px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+section .bander .content .content-include {
+  justify-content: center;
+  font-weight: 600;
+}
+section .bander .content .content-include .title {
+  padding-TOP: 6PX;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 20px;
   background-color: white;
   color: #950c17;
   display: inline;
+  font-size: 16px;
 }
-section .bander .content .big-title {
+section .bander .content .content-include .big-title {
   font-size: 2.3125rem;
+  margin-top: 10px;
   margin-bottom: 1.25rem;
   font-weight: 600;
 }
-section .bander .content .buy-btn {
+@media (max-width: 1400px) {
+  section .bander .content .content-include .big-title {
+    font-size: 29px;
+  }
+}
+@media (max-width: 842px) {
+  section .bander .content .content-include .big-title {
+    font-size: 16px;
+  }
+}
+section .bander .content .content-include .text {
+  margin-bottom: 40px;
+}
+section .bander .content .content-include .buy-btn {
   display: inline;
   background-color: #000000;
   color: white;
-  padding-top: 30px, 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 section .bander picture img {
   width: 100%;
