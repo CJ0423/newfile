@@ -17,10 +17,16 @@ nav {
   width: 100%;
   height: 56px;
   margin: auto;
-  padding-left: 34px;
-  padding-right: 34px;
+  padding-left: 65px;
+  padding-right: 50px;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 1080px) {
+  nav {
+    padding-left: 24px;
+    padding-right: 14px;
+  }
 }
 nav .mobile {
   display: none;
@@ -30,6 +36,7 @@ nav .links {
   height: 100%;
   margin-right: 73px;
   padding-left: 10px;
+  padding-right: 11px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,10 +45,16 @@ nav .links {
 nav .links .logo {
   width: 110px;
   height: 25px;
+  margin-right: 4px;
   background-image: url(../img/RE1Mu3b.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+@media (max-width: 1080px) {
+  nav .links .logo {
+    margin-right: 8px;
+  }
 }
 nav .links .more {
   display: flex;
@@ -116,13 +129,13 @@ nav .functions .function .search {
   background-image: url(../img/search.svg);
 }
 nav .functions .function .shopping {
-  margin-right: 20px;
+  margin-left: 10px;
   background-image: url(../img/cart.svg);
 }
 nav .functions .function .login {
   width: 33px;
   height: 33px;
-  margin-left: 12px;
+  margin-left: 5px;
   background-image: url(../img/login.svg);
 }
 nav .functions .car {
@@ -157,7 +170,7 @@ nav .mobile {
 
 @media (max-width: 860px) {
   nav {
-    padding: 10px;
+    padding: 5px;
   }
   nav .logo {
     position: absolute;
@@ -173,6 +186,7 @@ nav .mobile {
   nav .mobile {
     display: block;
     position: absolute;
+    z-index: 2;
     width: 100%;
     overflow: hidden;
     /* 漢堡按鈕 */

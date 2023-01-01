@@ -9,13 +9,13 @@
 
 <head>
     <!-- css link與相關設定 -->
-    <?php require_once('headfile.php'); ?>
+    <?php require_once('./headfile.php'); ?>
 </head>
 
 <body style="padding-top:45px;">
     <section id="header">
         <!-- 導覽列 -->
-        <?php require_once('navbar.php'); ?>       
+        <?php require_once('./navbar.php'); ?>       
     </section>
     
     <section id="content">
@@ -23,16 +23,16 @@
             <div class="row">
                 <div class="col-md-2">
                     <!-- 產品類別 -->
-                    <?php require_once('sidebar.php'); ?>
+                    <?php require_once('./sidebar.php'); ?>
                     <!-- 熱銷商品 -->
-                    <?php require_once('hot.php'); ?>
+                    <?php require_once('./hot.php'); ?>
                 </div>
                 <div class="col-md-10">
                     <!-- 廣告輪播 -->
-                    <?php require_once('carousel.php'); ?>
+                    <?php require_once('./carousel.php'); ?>
                     <hr>
                     <!-- product藥粧商品 -->
-                    <?php require_once('product_list.php'); ?>
+                    <?php require_once('./product_list.php'); ?>
                 </div>
             </div>
         </div>
@@ -40,14 +40,14 @@
     <hr>
     <section id="scontent">
         <!-- 服務說明 -->
-        <?php require_once('scontent.php'); ?>
+        <?php require_once('./scontent.php'); ?>
     </section>
     <section id="footer">
         <!-- 聯絡資訊 -->
-        <?php require_once('footer.php'); ?>
+        <?php require_once('./footer.php'); ?>
     </section>
         <!-- javascript檔 -->
-    <?php require_once('jsfile.php'); ?>
+    <?php require_once('./jsfile.php'); ?>
 </body>
 
 </html>
