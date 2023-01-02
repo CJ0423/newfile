@@ -29,6 +29,7 @@ nav {
   }
 }
 nav .mobile {
+  background-color: gold;
   display: none;
 }
 nav .links {
@@ -63,7 +64,7 @@ nav .links .more {
   display: none;
 }
 nav .links .more .icon {
-  background-image: url(../img/down-arrow.svg);
+  background-image: url(../img/newImage/chevron-down.svg);
   width: 20px;
   height: 35px;
   background-position: bottom;
@@ -85,7 +86,7 @@ nav .functions .all {
   align-items: center;
 }
 nav .functions .all .icon {
-  background-image: url(../img/down-arrow.svg);
+  background-image: url(../img/newImage/chevron-down.svg);
   width: 20px;
   height: 35px;
   background-position: bottom;
@@ -126,11 +127,11 @@ nav .functions .function .icon {
 nav .functions .function .search {
   height: 30px;
   margin-right: 50px;
-  background-image: url(../img/search.svg);
+  background-image: url(../img/newImage/search.png);
 }
 nav .functions .function .shopping {
   margin-left: 10px;
-  background-image: url(../img/cart.svg);
+  background-image: url(../img/newImage/cart.svg);
 }
 nav .functions .function .login {
   width: 33px;
@@ -170,7 +171,9 @@ nav .mobile {
 
 @media (max-width: 860px) {
   nav {
-    padding: 5px;
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
   nav .logo {
     position: absolute;
@@ -187,7 +190,7 @@ nav .mobile {
     display: block;
     position: absolute;
     z-index: 2;
-    width: 100%;
+    width: calc(100% - 10px);
     overflow: hidden;
     /* 漢堡按鈕 */
     /* menu*/
@@ -200,22 +203,28 @@ nav .mobile {
   }
   nav .mobile label {
     float: left;
-    padding-right: 50px;
     line-height: 50px;
     cursor: pointer;
   }
   nav .mobile label img {
-    width: 30px;
     vertical-align: middle;
   }
   nav .mobile label::before {
-    content: "三";
+    content: url(../img/newImage/list1.svg);
+    width: 20px;
+    height: 40px;
+    display: block;
   }
   nav .mobile input:checked + label::before {
     display: none;
   }
   nav .mobile label::after {
-    content: "X";
+    content: url(../img/newImage/x2.svg);
+    width: 20px;
+    height: 40px;
+    margin-bottom: 7px;
+    -o-object-fit: contain;
+       object-fit: contain;
     display: none;
   }
   nav .mobile input:checked + label::after {
@@ -226,25 +235,37 @@ nav .mobile {
     clear: both;
     background: #f2f2f2;
   }
+  nav .mobile .menu .first {
+    border-top: solid 1px #cccccc;
+  }
+  nav .mobile .menu .list {
+    border-bottom: solid 1px #000000;
+  }
   nav .mobile .menu li {
+    width: 100%;
+    padding-top: 14px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    font-size: 15px;
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
-    border-bottom: 1px solid #efefef;
+    border-bottom: solid 1px #cccccc;
   }
   nav .mobile .menu li a {
     display: block;
-    line-height: 50px;
-    font-size: 18px;
-    color: #5d5d5d;
+    line-height: 25px;
+    font-weight: 400px;
+    font-size: 15px;
+    color: black;
     text-align: left;
+    -webkit-text-decoration: solid;
+            text-decoration: solid;
     text-decoration: none;
-  }
-  nav .mobile .menu li a:hover {
-    background: #5d5d5d;
-    color: #fff;
+    outline: black;
   }
   nav .mobile input:checked ~ .menu {
     display: block;
-    max-height: 800px;
+    width: 100%;
   }
   nav .links .link.mirsoft {
     display: none;

@@ -28,12 +28,15 @@ nav {
     @media (max-width:1080px) {
         padding-left: 24px;
         padding-right: 14px;
-        
+
     }
+
     // 關閉漢堡條
-.mobile{
-    display: none;
-}
+    .mobile {
+        background-color:gold ;
+        // width: 100%;
+        display: none;
+    }
 
     .links {
         width: 535px;
@@ -53,13 +56,15 @@ nav {
             width: 110px;
             height: 25px;
             margin-right: 4px;
-           
+
             background-image: url(../img/RE1Mu3b.png);
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
 
-            @media (max-width:1080px) {margin-right: 8px;}
+            @media (max-width:1080px) {
+                margin-right: 8px;
+            }
 
         }
 
@@ -71,7 +76,7 @@ nav {
             display: none;
 
             .icon {
-                background-image: url(../img/down-arrow.svg);
+                background-image: url(../img/newImage/chevron-down.svg);
                 width: 20px;
                 height: 35px;
                 background-position: bottom;
@@ -100,7 +105,7 @@ nav {
             align-items: center;
 
             .icon {
-                background-image: url(../img/down-arrow.svg);
+                background-image: url(../img/newImage/chevron-down.svg);
                 width: 20px;
                 height: 35px;
                 background-position: bottom;
@@ -153,12 +158,12 @@ nav {
             .search {
                 height: 30px;
                 margin-right: 50px;
-                background-image: url(../img/search.svg);
+                background-image: url(../img/newImage/search.png);
             }
 
             .shopping {
                 margin-left: 10px;
-                background-image: url(../img/cart.svg);
+                background-image: url(../img/newImage/cart.svg);
             }
 
             .login {
@@ -186,7 +191,8 @@ nav {
         align-items: center;
 
         font-size: 13px;
-// 其中兩個選項變成更多
+
+        // 其中兩個選項變成更多
         @media(max-width:880px) {
             .more {
                 display: block;
@@ -213,94 +219,140 @@ nav {
 // 啟動手機版本變形
 @media (max-width:860px) {
     nav {
-        padding: 5px;
+        padding: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+
         // background-color: bisque;
         // 將功能列調整位置
-        .logo{
-            
+        .logo {
+
             position: absolute;
             left: calc(50% - 55px);
         }
 
-        .functions{
-                .all{
-                    display: none;
-                }
-                .search{
-                    position: absolute;
-                    left: 10%;
-                }
+        .functions {
+            .all {
+                display: none;
             }
+
+            .search {
+                position: absolute;
+                left: 10%;
+            }
+        }
+
         // 開啟漢堡條
-        .mobile{display: block;
+        .mobile {
+            display: block;
             // 利用絕對位置漂浮特性做到滿版效果
             position: absolute;
             z-index: 2;
-     
-    //    這是要扣除掉NAV的10PX的PADDING
-           width: calc(100%);
+
+            //    這是要扣除掉NAV的10PX的PADDING
+            width: calc(100% - 10px);
             overflow: hidden;
-            ul{
+
+            ul {
                 list-style: none;
             }
+
             input {
                 display: none;
-              }         
-              /* 漢堡按鈕 */
-              label {
+            }
+
+            /* 漢堡按鈕 */
+            label {
                 float: left;
-                padding-right: 50px;
+                // width: 20px;
+                // height: 20px;
+                // background-color: #950c17;
+
                 line-height: 50px;
+                // width: 30px;
+                // height: 30px;
                 cursor: pointer;
+
                 img {
-                  width: 30px;   
-                  vertical-align: middle;
+                    // width: 30px;
+                    vertical-align: middle;
                 }
             }
-        label::before{content: "三";} 
-        input:checked + label::before{
-            display: none;
-        } 
-        label::after{content: "X";
-        display: none;}
-        input:checked + label::after{
-            display: block;}
 
-              /* menu*/
-              .menu {
+            label::before {
+                content: url(../img/newImage/list1.svg);
+                width: 20px;
+                height: 40px;
+                display: block;
+            }
+
+            input:checked+label::before {
+                display: none;
+            }
+
+            label::after {
+                content: url(../img/newImage/x2.svg);
+                width: 20px;
+                height: 40px;
+                margin-bottom: 7px;
+                object-fit: contain;
+                display: none;
+            }
+
+            input:checked+label::after {
+                display: block;
+            }
+
+            /* menu*/
+            .menu {
                 display: none;
                 clear: both;
                 background: #f2f2f2;
-                li {
-                  text-align: center;
-                  border-bottom: 1px solid #efefef;
-                  a {
-                    display: block;
-                    line-height: 50px;
-                    font-size: 18px;
-                    color: #5d5d5d;
-                    text-align: left;
-                    text-decoration: none;
 
-                    &:hover {
-                      background: #5d5d5d;
-                      color: #fff;
-                    }
-                  }
+                .first {
+                    border-top: solid 1px #cccccc;
                 }
+
+                .list {
+                    border-bottom: solid 1px #000000;
+                }
+
+                li {
+                    width: 100%;
+                    padding-top: 14px;
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+                    font-size: 15px;
+                    font-family: 'Segoe UI', SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    text-align: center;
+
+                    border-bottom: solid 1px #cccccc;
+
+
+
+                    a {
+                        display: block;
+                        line-height: 25px;
+                        font-weight: 400px;
+                        font-size: 15px;
+                        color: black;
+                        text-align: left;
+                        text-decoration: solid;
+                        text-decoration: none;
+                        outline: black;
+                    }
+                }
+            }
+
+            input:checked~.menu {
+
+                display: block;
+                // 這個地方決定了全部總共可以有多少個
+                // max-height: 800px;
+                width: 100%;
+            }
         }
-        input:checked ~ .menu {
-    
-            display: block;
-            // 這個地方決定了全部總共可以有多少個
-            max-height: 800px;
-          }
-    }
-
-
-
-
-
 
 
         // 連結關閉
@@ -331,7 +383,7 @@ nav {
         }
     }
 
-// 右側Logo
+    // 右側Logo
     .links.logo {
 
         width: 110px;
@@ -346,92 +398,101 @@ nav {
 }
 
 // bander
-section{
+section {
     display: flex;
     justify-content: center;
-    .bander{
-        
+
+    .bander {
+
         position: relative;
         display: flex;
         justify-content: center;
-        
-       
-    .content{
-        background-color: aqua;
-        width: 35%;
-        height: 51%;
-        padding: 48PX;
 
-        position: absolute;
-        left: 10%;
-        top: 22.58%;
-        @media (max-width:1082px) {
-            width: 98%;
-            top:90%;
-            left:1%;
-            background-color: #fff;
-            box-shadow: 0 0.0625rem 0.125rem rgb(0 0 0 / 11%), 0 0.1875rem 0.4375rem rgb(0 0 0 / 13%);            
-        }
-        @media(max-width:858px){
-            width: 100%;
-            top: calc(100%);
-            left:0%;
-            padding-top: 24px;
-            padding-bottom: 16px;
-            padding-left: 12px;
-            padding-right: 12px;
-        }
-        .content-include{
-            // background-color: #950c17;
-            justify-content: center;
-            font-weight: 600;
 
-            // 要在裡面進行修改
+        .content {
+            background-color: aqua;
+            width: 35%;
+            height: 51%;
+            padding: 48PX;
 
-        .title{
-            padding-TOP:6PX;
-            padding-bottom: 6px;
-            padding-left: 12px;
-            padding-right:12px ;
-            margin-bottom: 20px;
-            background-color: white;
-            color:#950c17;
-            display:inline;
-            font-size:16px;
-        }
-        .big-title{
-            font-size: 2.3125rem;
-            margin-top: 10px;
-            margin-bottom: 1.25rem;
-            font-weight: 600; 
-            @media (max-width:1400px) {
-                font-size: 29px;
-            }         
-            @media(max-width:842px){
-                font-size: 16px;
+            position: absolute;
+            left: 10%;
+            top: 22.58%;
+
+            @media (max-width:1082px) {
+                width: 98%;
+                top: 90%;
+                left: 1%;
+                background-color: #fff;
+                box-shadow: 0 0.0625rem 0.125rem rgb(0 0 0 / 11%), 0 0.1875rem 0.4375rem rgb(0 0 0 / 13%);
+            }
+
+            @media(max-width:858px) {
+                width: 100%;
+                top: calc(100%);
+                left: 0%;
+                padding-top: 24px;
+                padding-bottom: 16px;
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .content-include {
+                // background-color: #950c17;
+                justify-content: center;
+                font-weight: 600;
+
+                // 要在裡面進行修改
+
+                .title {
+                    padding-TOP: 6PX;
+                    padding-bottom: 6px;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                    margin-bottom: 20px;
+                    background-color: white;
+                    color: #950c17;
+                    display: inline;
+                    font-size: 16px;
+                }
+
+                .big-title {
+                    font-size: 2.3125rem;
+                    margin-top: 10px;
+                    margin-bottom: 1.25rem;
+                    font-weight: 600;
+
+                    @media (max-width:1400px) {
+                        font-size: 29px;
+                    }
+
+                    @media(max-width:842px) {
+                        font-size: 16px;
+                    }
+                }
+
+                .text {
+                    margin-bottom: 40px;
+                }
+
+                .buy-btn {
+                    display: inline;
+                    background-color: #000000;
+                    color: white;
+
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                }
             }
         }
-        .text{
-            margin-bottom: 40px;
-        }
-       
-        .buy-btn{
-            display: inline;
-            background-color: #000000;
-            color: white;
-            
-            padding-top:10px;
-            padding-bottom:10px;
-            padding-left:12px;
-            padding-right:12px;
-        }
-    }
-    }
-        picture{
+
+        picture {
             img {
                 width: 100%;
                 height: auto;
-              }
+            }
         }
 
     }
