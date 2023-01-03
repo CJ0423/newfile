@@ -387,4 +387,105 @@ section .bander .content .content-include .buy-btn {
 section .bander picture img {
   width: 100%;
   height: auto;
+}
+
+section {
+  margin-top: 10px;
+}
+section .chose {
+  margin-top: 0px;
+  width: 176px;
+  height: 44px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 1081px) {
+  section .chose {
+    margin-top: 257px;
+  }
+}
+@media (max-width: 860px) {
+  section .chose {
+    margin-top: 237px;
+  }
+}
+section .chose .space-left:hover > .left {
+  transition: 1s ease;
+  transform: translateX(-10px);
+}
+section .chose .space-right:hover > .right {
+  transition: 1s ease;
+  transform: translateX(10px);
+}
+section .chose .left {
+  width: 24px;
+  height: 36px;
+  background-image: url(../img/newImage/goleft.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+section .chose .right {
+  width: 24px;
+  height: 36px;
+  background-image: url(../img/newImage/goright.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+section .chose .black {
+  width: 12px;
+  height: 24px;
+  background-image: url(../img/newImage/circle-solid.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+section .chose .white {
+  width: 12px;
+  height: 24px;
+  background-image: url(../img/newImage/circle-regular.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+section .jump {
+  width: 100%;
+  height: 200px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+section .jump .space {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .jump .space .windows {
+  width: 100px;
+  height: 40px;
+  margin-bottom: 8px;
+  background-image: url(../img/newImage/windows40x40.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+section .jump .space .pad {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+  background-image: url(../img/newImage/pad.webp);
+}
+section .jump .space a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+section .jump .left {
+  margin-right: 35px;
+}
+section .jump .right {
+  margin-left: 35px;
 }/*# sourceMappingURL=mirsoft.css.map */

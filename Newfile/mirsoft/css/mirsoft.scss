@@ -184,7 +184,7 @@ nav {
         width: 535px;
         height: 100%;
         padding-left: 10px;
-        
+
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -221,6 +221,7 @@ nav {
         padding: 0px;
         padding-top: 5px;
         padding-bottom: 5px;
+
         // background-color: bisque;
         // 將功能列調整位置
         .logo {
@@ -238,7 +239,8 @@ nav {
                 position: absolute;
                 left: 7%;
             }
-            .car{
+
+            .car {
                 margin-right: 10px;
             }
         }
@@ -265,8 +267,8 @@ nav {
             /* 漢堡按鈕 */
             label {
                 position: relative;
-                left:16px;
-                top:-5px;
+                left: 16px;
+                top: -5px;
                 float: left;
                 // width: 20px;
                 // height: 20px;
@@ -362,7 +364,7 @@ nav {
         .links {
             .link.mirsoft {
                 display: none;
-         
+
             }
 
             .link.eams {
@@ -418,31 +420,33 @@ section {
             position: absolute;
             left: 10%;
             top: 22.58%;
-            
+
 
             @media (max-width:1082px) {
                 width: 98%;
                 top: 93%;
                 left: 1%;
                 background-color: #fff;
-                box-shadow: 0 0.0625rem 0.125rem rgb(0 0 0 / 11%), 0 0.1875rem 0.4375rem rgb(0 0 0 / 13%);          
+                box-shadow: 0 0.0625rem 0.125rem rgb(0 0 0 / 11%), 0 0.1875rem 0.4375rem rgb(0 0 0 / 13%);
             }
+
             @media(max-width:858px) {
                 width: 100%;
-                top:100%;
+                top: 100%;
                 left: 0%;
                 padding-top: 24px;
-                padding-bottom:16px;
+                padding-bottom: 16px;
                 padding-left: 12px;
                 padding-right: 12px;
             }
-           
+
 
             .content-include {
                 // background-color: #950c17;
                 justify-content: center;
                 font-weight: 600;
-                @media(max-width:858px){
+
+                @media(max-width:858px) {
                     line-height: 1.2;
                 }
 
@@ -469,9 +473,8 @@ section {
                     @media (max-width:1400px) {
                         font-size: 29px;
                     }
-                    @media(max-width:1100px){
-    
-                    }
+
+                    @media(max-width:1100px) {}
 
                     @media(max-width:842px) {
                         font-size: 24px;
@@ -500,6 +503,127 @@ section {
                 width: 100%;
                 height: auto;
             }
+        }
+    }
+}
+
+// 往左往右的選項
+section {
+    margin-top: 10px;
+
+    .chose {
+        margin-top: 0px;
+        width: 176px;
+        height: 44px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @media (max-width:1081px) {
+
+            margin-top: 257px
+        }
+
+        @media(max-width:860px) {
+            margin-top: 237px
+        }
+
+        .space-left {
+            &:hover>.left {
+                transition: 1s ease;
+                transform: translateX(-10px);
+            }
+        }
+
+        .space-right {
+            &:hover>.right {
+                transition: 1s ease;
+                transform: translateX(10px);
+            }
+        }
+
+        .left {
+            width: 24px;
+            height: 36px;
+            background-image: url(../img/newImage/goleft.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+
+
+        }
+
+        .right {
+            width: 24px;
+            height: 36px;
+            background-image: url(../img/newImage/goright.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        .black {
+            width: 12px;
+            height: 24px;
+            background-image: url(../img/newImage/circle-solid.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            ;
+        }
+
+        .white {
+            width: 12px;
+            height: 24px;
+            background-image: url(../img/newImage/circle-regular.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+}
+
+// 三個小圖案
+section {
+
+    .jump {
+        width: 100%;
+        height: 200px;
+        margin: 30px;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .space {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .windows {
+                width: 100px;
+                height: 40px;
+                margin-bottom: 8px;
+
+                background-image: url(../img/newImage/windows40x40.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            .pad {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 8px;
+                background-image: url(../img/newImage/pad.webp);
+            }
+            a{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+        .left{margin-right: 35px;}
+        .right{
+            margin-left: 35px;
         }
 
     }
