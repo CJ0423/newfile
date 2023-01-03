@@ -33,7 +33,6 @@ nav {
 
     // 關閉漢堡條
     .mobile {
-        background-color:gold ;
         // width: 100%;
         display: none;
     }
@@ -77,8 +76,8 @@ nav {
 
             .icon {
                 background-image: url(../img/newImage/chevron-down.svg);
-                width: 20px;
-                height: 35px;
+                width: 14px;
+                height: 25px;
                 background-position: bottom;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -106,8 +105,8 @@ nav {
 
             .icon {
                 background-image: url(../img/newImage/chevron-down.svg);
-                width: 20px;
-                height: 35px;
+                width: 14px;
+                height: 25px;
                 background-position: bottom;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -185,7 +184,7 @@ nav {
         width: 535px;
         height: 100%;
         padding-left: 10px;
-
+        
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -222,8 +221,6 @@ nav {
         padding: 0px;
         padding-top: 5px;
         padding-bottom: 5px;
-
-
         // background-color: bisque;
         // 將功能列調整位置
         .logo {
@@ -239,7 +236,10 @@ nav {
 
             .search {
                 position: absolute;
-                left: 10%;
+                left: 7%;
+            }
+            .car{
+                margin-right: 10px;
             }
         }
 
@@ -264,6 +264,9 @@ nav {
 
             /* 漢堡按鈕 */
             label {
+                position: relative;
+                left:16px;
+                top:-5px;
                 float: left;
                 // width: 20px;
                 // height: 20px;
@@ -359,6 +362,7 @@ nav {
         .links {
             .link.mirsoft {
                 display: none;
+         
             }
 
             .link.eams {
@@ -403,44 +407,44 @@ section {
     justify-content: center;
 
     .bander {
-
         position: relative;
         display: flex;
         justify-content: center;
 
 
         .content {
-            background-color: aqua;
             width: 35%;
-            height: 51%;
             padding: 48PX;
-
             position: absolute;
             left: 10%;
             top: 22.58%;
+            
 
             @media (max-width:1082px) {
                 width: 98%;
-                top: 90%;
+                top: 93%;
                 left: 1%;
                 background-color: #fff;
-                box-shadow: 0 0.0625rem 0.125rem rgb(0 0 0 / 11%), 0 0.1875rem 0.4375rem rgb(0 0 0 / 13%);
+                box-shadow: 0 0.0625rem 0.125rem rgb(0 0 0 / 11%), 0 0.1875rem 0.4375rem rgb(0 0 0 / 13%);          
             }
-
             @media(max-width:858px) {
                 width: 100%;
-                top: calc(100%);
+                top:100%;
                 left: 0%;
                 padding-top: 24px;
-                padding-bottom: 16px;
+                padding-bottom:16px;
                 padding-left: 12px;
                 padding-right: 12px;
             }
+           
 
             .content-include {
                 // background-color: #950c17;
                 justify-content: center;
                 font-weight: 600;
+                @media(max-width:858px){
+                    line-height: 1.2;
+                }
 
                 // 要在裡面進行修改
 
@@ -465,9 +469,12 @@ section {
                     @media (max-width:1400px) {
                         font-size: 29px;
                     }
+                    @media(max-width:1100px){
+    
+                    }
 
                     @media(max-width:842px) {
-                        font-size: 16px;
+                        font-size: 24px;
                     }
                 }
 
@@ -476,7 +483,7 @@ section {
                 }
 
                 .buy-btn {
-                    display: inline;
+                    display: inline-block;
                     background-color: #000000;
                     color: white;
 

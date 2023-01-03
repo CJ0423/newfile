@@ -29,7 +29,6 @@ nav {
   }
 }
 nav .mobile {
-  background-color: gold;
   display: none;
 }
 nav .links {
@@ -65,8 +64,8 @@ nav .links .more {
 }
 nav .links .more .icon {
   background-image: url(../img/newImage/chevron-down.svg);
-  width: 20px;
-  height: 35px;
+  width: 14px;
+  height: 25px;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
@@ -87,8 +86,8 @@ nav .functions .all {
 }
 nav .functions .all .icon {
   background-image: url(../img/newImage/chevron-down.svg);
-  width: 20px;
-  height: 35px;
+  width: 14px;
+  height: 25px;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
@@ -184,7 +183,10 @@ nav .mobile {
   }
   nav .functions .search {
     position: absolute;
-    left: 10%;
+    left: 7%;
+  }
+  nav .functions .car {
+    margin-right: 10px;
   }
   nav .mobile {
     display: block;
@@ -202,6 +204,9 @@ nav .mobile {
     display: none;
   }
   nav .mobile label {
+    position: relative;
+    left: 16px;
+    top: -5px;
     float: left;
     line-height: 50px;
     cursor: pointer;
@@ -305,9 +310,7 @@ section .bander {
   justify-content: center;
 }
 section .bander .content {
-  background-color: aqua;
   width: 35%;
-  height: 51%;
   padding: 48PX;
   position: absolute;
   left: 10%;
@@ -316,7 +319,7 @@ section .bander .content {
 @media (max-width: 1082px) {
   section .bander .content {
     width: 98%;
-    top: 90%;
+    top: 93%;
     left: 1%;
     background-color: #fff;
     box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.11), 0 0.1875rem 0.4375rem rgba(0, 0, 0, 0.13);
@@ -336,6 +339,11 @@ section .bander .content {
 section .bander .content .content-include {
   justify-content: center;
   font-weight: 600;
+}
+@media (max-width: 858px) {
+  section .bander .content .content-include {
+    line-height: 1.2;
+  }
 }
 section .bander .content .content-include .title {
   padding-TOP: 6PX;
@@ -361,14 +369,14 @@ section .bander .content .content-include .big-title {
 }
 @media (max-width: 842px) {
   section .bander .content .content-include .big-title {
-    font-size: 16px;
+    font-size: 24px;
   }
 }
 section .bander .content .content-include .text {
   margin-bottom: 40px;
 }
 section .bander .content .content-include .buy-btn {
-  display: inline;
+  display: inline-block;
   background-color: #000000;
   color: white;
   padding-top: 10px;
