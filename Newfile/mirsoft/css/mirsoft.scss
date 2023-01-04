@@ -236,8 +236,8 @@ nav {
             }
 
             .search {
-                position: absolute;
-                left: 7%;
+                position: fixed;
+                left: 50px;
             }
 
             .car {
@@ -405,6 +405,7 @@ nav {
 
 // bander
 section {
+    margin-top: 0px;
     display: flex;
     justify-content: center;
 
@@ -508,7 +509,7 @@ section {
 }
 
 // 往左往右的選項
-section {
+section.space {
     margin-top: 10px;
 
     .chose {
@@ -626,5 +627,36 @@ section {
             margin-left: 35px;
         }
 
+    }
+}
+.all-cards{
+    width: 100%;
+    background-color: #950c17;
+    display: flex;
+    justify-content: center;
+    .four-card{
+        max-width: 1600px;
+        width: 90%;
+        padding: 0px 5%;
+        box-sizing: content-box;
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .card{
+        width: 25%;
+        padding:0px 12px;
+        @media (max-width:1080px) {
+            width:50%
+            
+        }
+        @media(max-width:540px){
+            width:100%
+        }
+            img{
+                width: 100%;
+      
+            }
+        }
     }
 }

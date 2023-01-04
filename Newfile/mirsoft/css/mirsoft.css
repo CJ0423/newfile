@@ -182,8 +182,8 @@ nav .mobile {
     display: none;
   }
   nav .functions .search {
-    position: absolute;
-    left: 7%;
+    position: fixed;
+    left: 50px;
   }
   nav .functions .car {
     margin-right: 10px;
@@ -301,6 +301,7 @@ nav .mobile {
   }
 }
 section {
+  margin-top: 0px;
   display: flex;
   justify-content: center;
 }
@@ -389,10 +390,10 @@ section .bander picture img {
   height: auto;
 }
 
-section {
+section.space {
   margin-top: 10px;
 }
-section .chose {
+section.space .chose {
   margin-top: 0px;
   width: 176px;
   height: 44px;
@@ -401,24 +402,24 @@ section .chose {
   align-items: center;
 }
 @media (max-width: 1081px) {
-  section .chose {
+  section.space .chose {
     margin-top: 257px;
   }
 }
 @media (max-width: 860px) {
-  section .chose {
+  section.space .chose {
     margin-top: 237px;
   }
 }
-section .chose .space-left:hover > .left {
+section.space .chose .space-left:hover > .left {
   transition: 1s ease;
   transform: translateX(-10px);
 }
-section .chose .space-right:hover > .right {
+section.space .chose .space-right:hover > .right {
   transition: 1s ease;
   transform: translateX(10px);
 }
-section .chose .left {
+section.space .chose .left {
   width: 24px;
   height: 36px;
   background-image: url(../img/newImage/goleft.svg);
@@ -426,7 +427,7 @@ section .chose .left {
   background-size: contain;
   background-position: center;
 }
-section .chose .right {
+section.space .chose .right {
   width: 24px;
   height: 36px;
   background-image: url(../img/newImage/goright.svg);
@@ -434,7 +435,7 @@ section .chose .right {
   background-size: contain;
   background-position: center;
 }
-section .chose .black {
+section.space .chose .black {
   width: 12px;
   height: 24px;
   background-image: url(../img/newImage/circle-solid.svg);
@@ -442,7 +443,7 @@ section .chose .black {
   background-size: contain;
   background-position: center;
 }
-section .chose .white {
+section.space .chose .white {
   width: 12px;
   height: 24px;
   background-image: url(../img/newImage/circle-regular.svg);
@@ -488,4 +489,38 @@ section .jump .left {
 }
 section .jump .right {
   margin-left: 35px;
+}
+
+.all-cards {
+  width: 100%;
+  background-color: #950c17;
+  display: flex;
+  justify-content: center;
+}
+.all-cards .four-card {
+  max-width: 1600px;
+  width: 90%;
+  padding: 0px 5%;
+  box-sizing: content-box;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.all-cards .four-card .card {
+  width: 25%;
+  padding: 0px 12px;
+}
+@media (max-width: 1080px) {
+  .all-cards .four-card .card {
+    width: 50%;
+  }
+}
+@media (max-width: 540px) {
+  .all-cards .four-card .card {
+    width: 100%;
+  }
+}
+.all-cards .four-card .card img {
+  width: 100%;
 }/*# sourceMappingURL=mirsoft.css.map */
