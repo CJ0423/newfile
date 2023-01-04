@@ -452,20 +452,26 @@ section.space .chose .white {
   background-position: center;
 }
 
-section .jump {
+@media (max-width: 580px) {
+  .give-me-space {
+    margin-bottom: 50px;
+  }
+}
+.give-me-space .jump {
   width: 100%;
-  height: 200px;
+  height: 100px;
   margin: 30px;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
-section .jump .space {
+.give-me-space .jump .space {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-section .jump .space .windows {
+.give-me-space .jump .space .windows {
   width: 100px;
   height: 40px;
   margin-bottom: 8px;
@@ -474,26 +480,30 @@ section .jump .space .windows {
   background-repeat: no-repeat;
   background-size: contain;
 }
-section .jump .space .pad {
+.give-me-space .jump .space .pad {
   width: 40px;
   height: 40px;
   margin-bottom: 8px;
   background-image: url(../img/newImage/pad.webp);
 }
-section .jump .space a {
+.give-me-space .jump .space a {
   text-decoration: underline;
   cursor: pointer;
 }
-section .jump .left {
+.give-me-space .jump .left {
   margin-right: 35px;
 }
-section .jump .right {
+.give-me-space .jump .right {
   margin-left: 35px;
+}
+@media (max-width: 580px) {
+  .give-me-space .jump .right {
+    margin-top: 20px;
+  }
 }
 
 .all-cards {
   width: 100%;
-  background-color: #950c17;
   display: flex;
   justify-content: center;
 }
@@ -502,14 +512,20 @@ section .jump .right {
   width: 90%;
   padding: 0px 5%;
   box-sizing: content-box;
-  background-color: aqua;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+@media (max-width: 1080px) {
+  .all-cards .four-card {
+    width: 100%;
+    padding: 0 0px;
+  }
+}
 .all-cards .four-card .card {
   width: 25%;
   padding: 0px 12px;
+  margin-bottom: 0px;
 }
 @media (max-width: 1080px) {
   .all-cards .four-card .card {
@@ -519,20 +535,38 @@ section .jump .right {
 @media (max-width: 540px) {
   .all-cards .four-card .card {
     width: 100%;
+    margin-bottom: 48px;
   }
 }
 .all-cards .four-card .card img {
   width: 100%;
+  margin-bottom: 16px;
 }
 .all-cards .four-card .card .text {
   line-height: 1.5;
 }
 .all-cards .four-card .card .text .new {
+  width: 72px;
+  height: 28px;
+  padding: 6px 12px;
+  display: inline-block;
+  color: #fff;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 600;
+}
+.all-cards .four-card .card .text .new.have {
+  width: 72px;
+  height: 28px;
   padding: 6px 12px;
   display: inline-block;
   background-color: #950c17;
   color: #fff;
+  line-height: 1;
+  font-size: 16px;
   font-weight: 600;
+  box-sizing: border-box;
+  margin-bottom: 8px;
 }
 .all-cards .four-card .card .text .title {
   font-size: 29px;
@@ -551,8 +585,87 @@ section .jump .right {
   font-size: 16px;
   margin-bottom: 16px;
 }
-.all-cards .four-card .card .text .buy {
+.all-cards .four-card .card .text .become:hover > a.buy::after {
+  transition: all 0.5s ease;
+  transform: translateX(5px);
+}
+.all-cards .four-card .card .text .become a.buy {
   color: #950c17;
   font-weight: 600;
   cursor: pointer;
+}
+.all-cards .four-card .card .text .become a.buy::after {
+  display: inline-block;
+  width: 8PX;
+  height: 8PX;
+  position: relative;
+  top: 2PX;
+  left: 5px;
+  content: url(../img/newImage/goright-red.svg);
+}
+@media (max-width: 1080px) {
+  .all-cards .four-card .card.space {
+    margin-bottom: 48px;
+  }
+}
+@media (max-width: 540px) {
+  .all-cards .four-card .card.space {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+}
+
+.carousal {
+  margin-top: 96px;
+}
+.carousal .bander .content .content-include .title {
+  background-color: unset;
+}
+
+.card-no2 {
+  margin-top: 96px;
+}
+@media (max-width: 1081px) {
+  .card-no2 {
+    margin-top: 350px;
+  }
+}
+@media (max-width: 860px) {
+  .card-no2 {
+    margin-top: 350px;
+  }
+}
+.card-no2 .all-cards {
+  position: relative;
+}
+.card-no2 .all-cards .four-card {
+  position: relative;
+}
+.card-no2 .all-cards .four-card .big-title2 {
+  width: auto;
+  white-space: nowrap;
+  display: inline;
+  font-size: 29px;
+  position: absolute;
+  top: -10%;
+  left: 6%;
+  font-weight: 600;
+}
+@media (max-width: 1080px) {
+  .card-no2 .all-cards .four-card .big-title2 {
+    top: -5%;
+    left: 1.5%;
+  }
+}
+@media (max-width: 540px) {
+  .card-no2 .all-cards .four-card .big-title2 {
+    font-size: 24px;
+    top: -2%;
+    left: 2%;
+  }
+}
+@media (max-width: 1080px) {
+  .card-no2 .all-cards .four-card .big-title2 {
+    font-size: 21px;
+  }
 }/*# sourceMappingURL=mirsoft.css.map */
