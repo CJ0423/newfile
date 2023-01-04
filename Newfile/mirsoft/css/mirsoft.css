@@ -523,4 +523,36 @@ section .jump .right {
 }
 .all-cards .four-card .card img {
   width: 100%;
+}
+.all-cards .four-card .card .text {
+  line-height: 1.5;
+}
+.all-cards .four-card .card .text .new {
+  padding: 6px 12px;
+  display: inline-block;
+  background-color: #950c17;
+  color: #fff;
+  font-weight: 600;
+}
+.all-cards .four-card .card .text .title {
+  font-size: 29px;
+}
+@media (max-width: 1400px) {
+  .all-cards .four-card .card .text .title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1080px) {
+  .all-cards .four-card .card .text .title {
+    font-size: 21px;
+  }
+}
+.all-cards .four-card .card .text .content {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.all-cards .four-card .card .text .buy {
+  color: #950c17;
+  font-weight: 600;
+  cursor: pointer;
 }/*# sourceMappingURL=mirsoft.css.map */

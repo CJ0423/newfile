@@ -657,6 +657,33 @@ section {
                 width: 100%;
       
             }
+            .text{
+                line-height: 1.5;
+                .new{
+                    padding: 6px 12px;
+
+                    display: inline-block;
+                    background-color: #950c17;
+                    color:#fff;
+                    font-weight: 600;
+}
+                .title{font-size: 29px;
+                @media (max-width:1400px) {font-size: 24px;
+                    
+                }
+            @media(max-width:1080px){
+                font-size:21px
+            }}
+                .content{font-size: 16px;
+                margin-bottom: 16px;}
+                .buy{
+                    color: #950c17;
+                font-weight: 600;
+            cursor: pointer;
+                &::after{
+
+                } }
+            }
         }
     }
 }
