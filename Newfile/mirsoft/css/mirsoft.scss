@@ -404,7 +404,7 @@ nav {
 }
 
 // bander
-section {
+.bander-start {
     margin-top: 0px;
     display: flex;
     justify-content: center;
@@ -511,6 +511,8 @@ section {
 // 往左往右的選項
 section.space {
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
 
     .chose {
         margin-top: 0px;
@@ -586,10 +588,11 @@ section.space {
 
 // 三個小圖案
 .give-me-space {
-@media (max-width:580px) {
-    margin-bottom: 50px;
-    
-}
+    @media (max-width:580px) {
+        margin-bottom: 50px;
+
+    }
+
     .jump {
         width: 100%;
         height: 100px;
@@ -635,9 +638,10 @@ section.space {
 
         .right {
             margin-left: 35px;
+
             @media (max-width:580px) {
                 margin-top: 20px;
-                
+
             }
         }
 
@@ -645,7 +649,7 @@ section.space {
 }
 
 
-    .all-cards {
+.all-cards {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -658,10 +662,11 @@ section.space {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+
         @media (max-width:1080px) {
             width: 100%;
-            padding:0 0px;
-            
+            padding: 0 0px;
+
         }
 
         .card {
@@ -692,15 +697,16 @@ section.space {
                     width: 72px;
                     height: 28px;
                     padding: 6px 12px;
-                  
+
                     display: inline-block;
                     // background-color: #950c17;
                     color: #fff;
                     line-height: 1;
                     font-size: 16px;
                     font-weight: 600;
-                   
+
                 }
+
                 .new.have {
                     width: 72px;
                     height: 28px;
@@ -713,7 +719,7 @@ section.space {
                     font-size: 16px;
                     font-weight: 600;
                     box-sizing: border-box;
-                    margin-bottom: 8px; 
+                    margin-bottom: 8px;
                     // 由於行高會往下方擠壓因此補上行高的一半(text1.5倍heightlight)，向下進而達成平衡，
                 }
 
@@ -734,38 +740,40 @@ section.space {
                     font-size: 16px;
                     margin-bottom: 16px;
                 }
-                
-              .become{
-                &:hover>a.buy::after{
-                    transition: all 0.5s ease;
-                    transform: translateX(5px);
 
-                }
-                a.buy {
-                    color: #950c17;
-                    font-weight: 600;
-      
-                    cursor: pointer;
+                .become {
+                    &:hover>a.buy::after {
+                        transition: all 0.5s ease;
+                        transform: translateX(5px);
 
-
-                    &::after {
-                        display: inline-block;
-                        width: 8PX;
-                        height: 8PX;
-                        position: relative;
-                        top: 2PX;
-                        left: 5px;
-                        content: url(../img/newImage/goright-red.svg);
                     }
-                 
+
+                    a.buy {
+                        color: #950c17;
+                        font-weight: 600;
+
+                        cursor: pointer;
+
+
+                        &::after {
+                            display: inline-block;
+                            width: 8PX;
+                            height: 8PX;
+                            position: relative;
+                            top: 2PX;
+                            left: 5px;
+                            content: url(../img/newImage/goright-red.svg);
+                        }
+
+                    }
                 }
-            }
 
             }
         }
-        .card.space{
+
+        .card.space {
             @media (max-width:1080px) {
-              margin-bottom: 48px;
+                margin-bottom: 48px;
             }
 
             @media(max-width:540px) {
@@ -776,20 +784,27 @@ section.space {
         }
     }
 }
-.carousal{
+
+.bander-start.carousal {
     margin-top: 96px;
-    .bander{
-        .content{
-            .content-include{
-                .title{
-                    background-color:unset;
+
+    .bander {
+        .content {
+            .content-include {
+                .title {
+                    background-color: unset;
                 }
             }
         }
     }
 }
-.card-no2{
+
+.card-no2 {
     margin-top: 96px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+
     @media (max-width:1081px) {
 
         margin-top: 350px
@@ -798,35 +813,87 @@ section.space {
     @media(max-width:860px) {
         margin-top: 350px
     }
- .all-cards{
-    position: relative;
-    .four-card{position: relative;
-    .big-title2{
-        width: auto;
-        white-space: nowrap;
-        display: inline;
-        font-size:29px;
-        position: absolute;
-        top: -10%;
-        left:6%;
-        font-weight: 600;
-        @media(max-width:1080px) {
-            top: -5%;
-            left:1.5%;
-    
-        }
-        @media (max-width:540px) {
-            font-size: 24px;
-            top: -2%;
-            left:2%;
+
+    .all-cards {
+        display: flex;
+        position: relative;
+        justify-content: center;
+
+        .four-card {
+            position: relative;
+
 
         }
+    }
 
-        @media(max-width:1080px) {
-            font-size: 21px
+    .all-cards-and-title {
+        width: 90%;
+
+        .contral {
+            background-color: aqua;
+            .big-title2 {
+                width: auto;
+                white-space: nowrap;
+                display: inline-block;
+                font-size: 37px;
+
+                font-weight: 600;
+
+                @media (max-width:1400px) {
+                    font-size: 29px;
+                    left: 5%;
+
+                }
+
+                @media(max-width:1080px) {
+                    top: -5%;
+                    left: 1.5%;
+
+                }
+
+                @media (max-width:540px) {
+                    font-size: 24px;
+                    top: -2%;
+                    left: 2%;
+
+                }
+
+                @media(max-width:1080px) {
+                    font-size: 21px
+                }
+
+
+            }
         }
-    
+    }
+}
 
-    }}
+// 社群媒體和回到最上面
+section.fallow-and-go-top {
+    margin-top: 48px;
+    background-color: #950c17;
+
+    .fallow {
+        width: 200px;
+
+        display: flex;
+
+        .fallow-mircosoft {}
+
+        .social-media {
+            width: 32px;
+            height: 32px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .fb {
+            background-image: url(../img/newImage/facebook-f.svg);
+        }
+
+        .youtube {
+            background-image: url(../img/newImage/youtube.svg);
+        }
     }
 }

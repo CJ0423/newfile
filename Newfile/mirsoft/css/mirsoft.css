@@ -300,17 +300,17 @@ nav .mobile {
     background-repeat: no-repeat;
   }
 }
-section {
+.bander-start {
   margin-top: 0px;
   display: flex;
   justify-content: center;
 }
-section .bander {
+.bander-start .bander {
   position: relative;
   display: flex;
   justify-content: center;
 }
-section .bander .content {
+.bander-start .bander .content {
   width: 35%;
   padding: 48PX;
   position: absolute;
@@ -318,7 +318,7 @@ section .bander .content {
   top: 22.58%;
 }
 @media (max-width: 1082px) {
-  section .bander .content {
+  .bander-start .bander .content {
     width: 98%;
     top: 93%;
     left: 1%;
@@ -327,7 +327,7 @@ section .bander .content {
   }
 }
 @media (max-width: 858px) {
-  section .bander .content {
+  .bander-start .bander .content {
     width: 100%;
     top: 100%;
     left: 0%;
@@ -337,16 +337,16 @@ section .bander .content {
     padding-right: 12px;
   }
 }
-section .bander .content .content-include {
+.bander-start .bander .content .content-include {
   justify-content: center;
   font-weight: 600;
 }
 @media (max-width: 858px) {
-  section .bander .content .content-include {
+  .bander-start .bander .content .content-include {
     line-height: 1.2;
   }
 }
-section .bander .content .content-include .title {
+.bander-start .bander .content .content-include .title {
   padding-TOP: 6PX;
   padding-bottom: 6px;
   padding-left: 12px;
@@ -357,26 +357,26 @@ section .bander .content .content-include .title {
   display: inline;
   font-size: 16px;
 }
-section .bander .content .content-include .big-title {
+.bander-start .bander .content .content-include .big-title {
   font-size: 2.3125rem;
   margin-top: 10px;
   margin-bottom: 1.25rem;
   font-weight: 600;
 }
 @media (max-width: 1400px) {
-  section .bander .content .content-include .big-title {
+  .bander-start .bander .content .content-include .big-title {
     font-size: 29px;
   }
 }
 @media (max-width: 842px) {
-  section .bander .content .content-include .big-title {
+  .bander-start .bander .content .content-include .big-title {
     font-size: 24px;
   }
 }
-section .bander .content .content-include .text {
+.bander-start .bander .content .content-include .text {
   margin-bottom: 40px;
 }
-section .bander .content .content-include .buy-btn {
+.bander-start .bander .content .content-include .buy-btn {
   display: inline-block;
   background-color: #000000;
   color: white;
@@ -385,13 +385,15 @@ section .bander .content .content-include .buy-btn {
   padding-left: 12px;
   padding-right: 12px;
 }
-section .bander picture img {
+.bander-start .bander picture img {
   width: 100%;
   height: auto;
 }
 
 section.space {
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
 }
 section.space .chose {
   margin-top: 0px;
@@ -615,15 +617,18 @@ section.space .chose .white {
   }
 }
 
-.carousal {
+.bander-start.carousal {
   margin-top: 96px;
 }
-.carousal .bander .content .content-include .title {
+.bander-start.carousal .bander .content .content-include .title {
   background-color: unset;
 }
 
 .card-no2 {
   margin-top: 96px;
+  display: flex;
+  position: relative;
+  justify-content: center;
 }
 @media (max-width: 1081px) {
   .card-no2 {
@@ -636,36 +641,69 @@ section.space .chose .white {
   }
 }
 .card-no2 .all-cards {
+  display: flex;
   position: relative;
+  justify-content: center;
 }
 .card-no2 .all-cards .four-card {
   position: relative;
 }
-.card-no2 .all-cards .four-card .big-title2 {
+.card-no2 .all-cards-and-title {
+  width: 90%;
+}
+.card-no2 .all-cards-and-title .contral {
+  background-color: aqua;
+}
+.card-no2 .all-cards-and-title .contral .big-title2 {
   width: auto;
   white-space: nowrap;
-  display: inline;
-  font-size: 29px;
-  position: absolute;
-  top: -10%;
-  left: 6%;
+  display: inline-block;
+  font-size: 37px;
   font-weight: 600;
 }
+@media (max-width: 1400px) {
+  .card-no2 .all-cards-and-title .contral .big-title2 {
+    font-size: 29px;
+    left: 5%;
+  }
+}
 @media (max-width: 1080px) {
-  .card-no2 .all-cards .four-card .big-title2 {
+  .card-no2 .all-cards-and-title .contral .big-title2 {
     top: -5%;
     left: 1.5%;
   }
 }
 @media (max-width: 540px) {
-  .card-no2 .all-cards .four-card .big-title2 {
+  .card-no2 .all-cards-and-title .contral .big-title2 {
     font-size: 24px;
     top: -2%;
     left: 2%;
   }
 }
 @media (max-width: 1080px) {
-  .card-no2 .all-cards .four-card .big-title2 {
+  .card-no2 .all-cards-and-title .contral .big-title2 {
     font-size: 21px;
   }
+}
+
+section.fallow-and-go-top {
+  margin-top: 48px;
+  background-color: #950c17;
+}
+section.fallow-and-go-top .fallow {
+  width: 200px;
+  display: flex;
+}
+section.fallow-and-go-top .fallow .social-media {
+  width: 32px;
+  height: 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+section.fallow-and-go-top .fallow .fb {
+  background-image: url(../img/newImage/facebook-f.svg);
+}
+section.fallow-and-go-top .fallow .youtube {
+  background-image: url(../img/newImage/youtube.svg);
 }/*# sourceMappingURL=mirsoft.css.map */
