@@ -706,4 +706,39 @@ section.fallow-and-go-top .fallow .fb {
 }
 section.fallow-and-go-top .fallow .youtube {
   background-image: url(../img/newImage/youtube.svg);
+}
+
+footer .all-footer {
+  background-color: #f2f2f2;
+}
+footer .all-footer .use-padding {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 36px;
+  padding-bottom: 16px;
+}
+footer .all-footer .use-padding .top-footer {
+  background-color: #950c17;
+}
+footer .all-footer .use-padding .top-footer .top {
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .all-footer .use-padding .top-footer .bottom {
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .all-footer .use-padding .bottom-footer {
+  display: flex;
+}
+footer .all-footer .use-padding .bottom-footer .left {
+  width: 30%;
+}
+footer .all-footer .use-padding .bottom-footer .right {
+  width: 70%;
+  display: flex;
+  justify-content: right;
+}
+footer .all-footer .use-padding .bottom-footer .right .footer-text {
+  margin-left: 30px;
 }/*# sourceMappingURL=mirsoft.css.map */

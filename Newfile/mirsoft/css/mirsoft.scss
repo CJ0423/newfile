@@ -897,3 +897,38 @@ section.fallow-and-go-top {
         }
     }
 }
+footer{
+    .all-footer{
+        background-color: #f2f2f2;
+    
+    .use-padding{
+        padding-left:5%;
+        padding-right: 5%;
+        padding-top:36px;
+        padding-bottom:16px;
+        
+        .top-footer{
+            background-color: #950c17;
+            .top{display: flex;
+                justify-content: space-evenly;
+            }
+            .bottom{
+                display: flex;
+                justify-content: space-evenly;
+
+            }
+        }
+        .bottom-footer{
+            display: flex;
+            .left{width: 30%;}
+            .right{width:70%;
+            display: flex;
+            justify-content:right;
+        .footer-text{
+            margin-left: 30px;
+        }}
+
+        }
+    }
+}
+}
