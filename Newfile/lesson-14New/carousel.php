@@ -1,4 +1,5 @@
-<?php
+
+<?php 
                     //建立carousel查詢 
                     $SQLstring = "SELECT * FROM carousel where caro_online=1 order by caro_sort";
                     $carousel = mysqli_query($link, $SQLstring);
