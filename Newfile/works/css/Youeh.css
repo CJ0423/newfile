@@ -34,6 +34,16 @@ nav .top-nav .functions .function {
   font-size: 14px;
   margin-left: 25px;
 }
+@media (max-width: 1200px) {
+  nav .top-nav .functions .hidden-1200 {
+    display: none;
+  }
+}
+nav .top-nav .functions .hidden-1200 .function-ul {
+  list-style: none;
+  padding: 10px 20px 10px 10px;
+  border: #cfcece 1px solid;
+}
 nav .top-nav .functions .icons {
   display: flex;
   justify-content: center;
@@ -56,4 +66,10 @@ nav .top-nav .functions .icons form #search {
 }
 nav .top-nav .functions .bugar {
   display: none;
+}
+@media (max-width: 1200px) {
+  nav .top-nav .functions .bugar {
+    font-size: 20px;
+    display: block;
+  }
 }/*# sourceMappingURL=Youeh.css.map */
