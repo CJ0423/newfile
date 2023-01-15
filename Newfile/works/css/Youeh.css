@@ -1,0 +1,59 @@
+@charset "UTF-8";
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  max-width: 1600px;
+  padding: 8px 28px;
+}
+nav .top-nav {
+  display: flex;
+}
+nav .top-nav .small-logo {
+  display: none;
+}
+@media (max-width: 1200px) {
+  nav .top-nav .small-logo {
+    width: 60px;
+    height: auto;
+    display: block;
+    background-image: url(../img/ｌｏｇｏ.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+nav .top-nav .functions {
+  display: flex;
+  margin-left: auto;
+}
+nav .top-nav .functions .function {
+  font-size: 14px;
+  margin-left: 25px;
+}
+nav .top-nav .functions .icons {
+  display: flex;
+  justify-content: center;
+}
+nav .top-nav .functions .icons .icon {
+  margin-left: 25px;
+  font-size: 18px;
+}
+nav .top-nav .functions .icons form .search-text {
+  width: 0px;
+  border: none;
+  border-bottom: 1.5px solid #cfcece;
+  transition: ease-in-out 0.3s width, border-bottom;
+}
+nav .top-nav .functions .icons form:hover .search-text {
+  width: 100px;
+}
+nav .top-nav .functions .icons form #search {
+  display: none;
+}
+nav .top-nav .functions .bugar {
+  display: none;
+}/*# sourceMappingURL=Youeh.css.map */
