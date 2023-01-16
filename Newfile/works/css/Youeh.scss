@@ -34,50 +34,72 @@ nav {
                 font-size: 14px;
                 margin-left: 25px;
             }
-            .hidden-1200{
+
+            .hidden-1200 {
                 @media (max-width:1200px) {
                     display: none;
                 }
-                .function-ul{
+                #drop-down-money {
+                    display: none;
+    
+                    &:checked+.function-ul {
+                        display: block;
+                    }
+                }
+                #drop-down-langue{
+                    display: none;
+                    &:checked+.function-ul{
+                        display: block;
+                    }
+                }
+    
+                .function-ul {
+                    display: none;
                     list-style: none;
-                    padding: 10px 20px 10px 10px;
-                    border: #cfcece 1px solid;
                 }
+
+               
+            }
+        }
+
+
+        .icons {
+            display: flex;
+            justify-content: center;
+
+            .icon {
+                margin-left: 25px;
+                font-size: 18px;
             }
 
-            .icons {
-                display: flex;
-                justify-content: center;
+            form {
+                .search-text {
+                    width: 0px;
+                    border: none;
+                    border-bottom: 1.5px solid #cfcece;
+                    transition: ease-in-out 0.3s width, border-bottom;
 
-                .icon {
-                    margin-left: 25px;
-                    font-size: 18px;
                 }
 
-                form {
-                    .search-text{
-                        width: 0px;
-                        border: none;
-                        border-bottom: 1.5px  solid #cfcece ;
-                        transition: ease-in-out 0.3s width,border-bottom;
+                &:hover .search-text {
+                    width: 100px;
 
-                    }
-                    &:hover .search-text {
-                        width: 100px;
-                        
-                  
-                      }
-                      #search{display: none;}
-                    }
+
+                }
+
+                #search {
+                    display: none;
+                }
             }
+        }
 
-            .bugar {
-                display: none;
-                @media (max-width:1200px) {
-                    font-size: 20px;
-                    display: block;
-                    
-                }
+        .bugar {
+            display: none;
+
+            @media (max-width:1200px) {
+                font-size: 20px;
+                display: block;
+
             }
         }
     }
