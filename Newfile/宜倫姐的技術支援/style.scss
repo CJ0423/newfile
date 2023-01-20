@@ -2,6 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Noto+Serif+TC&family=Raleway:wght@100;200&display=swap');
 
+*{
+    box-sizing: border-box !important;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+
+}
 #all{
     font-family: 'Noto Serif TC', 'Noto Serif Display', sans-serif;
     color: #ceb686;
@@ -212,6 +219,8 @@ hr {
     background-color: #324249;
     color: #969696;
     padding-top: 10px;
+    @media(max-width:800px) {height: 120px;}
+    @media(max-width:420px) {height: 140px;}
 }
 
 a {
@@ -233,10 +242,37 @@ a:hover {
 .adjust-title{
     width:900px;
    @media(max-width:992px) {
-        width:700px
+    width:100%
+}
+   @media(max-width:800px) {
+    width:100%
+}
+   @media(max-width:650px) {
+        width:100%
     }
 }
 
 .adjust{
-    width:700px
+    width: 50%;
+    border-radius: 8%;
+    @media(max-width:992px) {
+        width:100%;
+   }
+}
+.adjust-title-img{
+    width:100%;
+    @media(max-width:992px) {
+         width:100%;
+         flex-direction: column;
+    }
+   @media(max-width:800px) {
+     width:100%;
+    }
+    @media(max-width:650px) {
+         width:100%;
+    }
+    display: flex;
+}
+.text{
+    text-align:left;margin-left: 50px;
 }

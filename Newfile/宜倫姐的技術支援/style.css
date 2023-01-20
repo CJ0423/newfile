@@ -1,6 +1,13 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Noto+Serif+TC&family=Raleway:wght@100;200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Noto+Serif+TC&family=Raleway:wght@100;200&display=swap");
+* {
+  box-sizing: border-box !important;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
 #all {
   font-family: "Noto Serif TC", "Noto Serif Display", sans-serif;
   color: #ceb686;
@@ -203,6 +210,16 @@ hr {
   color: #969696;
   padding-top: 10px;
 }
+@media (max-width: 800px) {
+  #footer {
+    height: 120px;
+  }
+}
+@media (max-width: 420px) {
+  #footer {
+    height: 140px;
+  }
+}
 
 a {
   color: #969696;
@@ -227,10 +244,52 @@ a:hover {
 }
 @media (max-width: 992px) {
   .adjust-title {
-    width: 700px;
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .adjust-title {
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  .adjust-title {
+    width: 100%;
   }
 }
 
 .adjust {
-  width: 700px;
+  width: 50%;
+  border-radius: 8%;
+}
+@media (max-width: 992px) {
+  .adjust {
+    width: 100%;
+  }
+}
+
+.adjust-title-img {
+  width: 100%;
+  display: flex;
+}
+@media (max-width: 992px) {
+  .adjust-title-img {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  .adjust-title-img {
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  .adjust-title-img {
+    width: 100%;
+  }
+}
+
+.text {
+  text-align: left;
+  margin-left: 50px;
 }/*# sourceMappingURL=style.css.map */
