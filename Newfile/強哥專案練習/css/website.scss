@@ -1,8 +1,27 @@
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 html{
     font-size: 16px;
+    box-sizing: border-box !important;
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9rem;
+
+
+    .navbar{
+        width: 100%;
+        padding: 0px;
+        background-color:rgb(251, 231, 231) !important;
+        border-top: 5px solid rgb(172, 140, 143); 
+        border-bottom: 5px solid rgb(172, 140, 143) ;
+    .nav-link{
+        text-align: center;
+    }
+    .navbar-brand{
+        padding: 0px;
+    .adjust-logo{
+
+        object-fit:contain
+    }}}
+
 }

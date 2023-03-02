@@ -1,9 +1,27 @@
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 html {
   font-size: 16px;
+  box-sizing: border-box !important;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.9rem;
+}
+body .navbar {
+  width: 100%;
+  padding: 0px;
+  background-color: rgb(251, 231, 231) !important;
+  border-top: 5px solid rgb(172, 140, 143);
+  border-bottom: 5px solid rgb(172, 140, 143);
+}
+body .navbar .nav-link {
+  text-align: center;
+}
+body .navbar .navbar-brand {
+  padding: 0px;
+}
+body .navbar .navbar-brand .adjust-logo {
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=website.css.map */
