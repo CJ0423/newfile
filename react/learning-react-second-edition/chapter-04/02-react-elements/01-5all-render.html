@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>React Elements</title>
+</head>
+<body>
+
+<!-- Target Container -->
+<div id="react-container"></div>
+
+<!-- React Library & React DOM-->
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+<script>
+//  這是透過react傳導的完整寫法，先寫 標籤,{key:"1"id:"名稱",className:"class名字","data-key":'test'},"內文" key是如果今天要用陣列的時候建議要寫這個react比較知道渲染的順序。
+    const dish = React.createElement("h1",{key:"1",id:"fat",className:"hi",'data-key':"test"}, "Baked Salmon")
+    const second=React.createElement("h2",{key:"2",id:"second",className:"second-class","data-kye":'text1'},"這是第二個")
+    ReactDOM.render(
+        [dish,second],
+        document.getElementById('react-container')
+    )
+
+    console.log('dish', dish)
+
+</script>
+
+</body>
+</html>
