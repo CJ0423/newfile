@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="react1">
+
+    </div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script>
+const react1=document.querySelector("#react1")
+
+const container=["這是第一個","這是第二個"]
+const new1=React.createElement("ul",{ id:"first"},container.map((item,key)=>{
+
+
+ return React.createElement("li",{className:"second","key":key},item)
+}))
+ReactDOM.render(
+    new1,react1
+)
+
+
+</script>
+</body>
+</html>
